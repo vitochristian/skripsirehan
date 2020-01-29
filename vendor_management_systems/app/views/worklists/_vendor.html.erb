@@ -1,0 +1,50 @@
+<div class='form-group' style="margin: 25px auto; width: 90%">
+  <%= form_tag worklists_path, method: :get do %>
+    <div class='col-sm-12 title'>
+      <div class='col-sm-5'>
+        <h4><b>VENDORS</b></h4>
+      </div>
+      <div class='col-sm-3' style="text-align: right;">
+        <%= select_tag :ms_vendor_type_id, options_for_select(@ms_vendor_types, params[:ms_vendor_type_id]), prompt: 'Vendor Type', class: 'form-control' %>
+      </div>
+      <div class='col-sm-3' style="text-align: right;">
+        <%= select_tag :office_location, options_for_select(['Indonesia', 'Overseas'], params[:office_location]), prompt: 'Location', class: 'form-control' %>
+      </div>
+      <div class='col-sm-1'>
+        <%= submit_tag 'FILTER', class: 'btn btn-info' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>NO.</th>
+      <th>COMPANY NAME</th>
+      <th>SALES PHONE</th>
+      <th>CITY</th>
+      <th>TYPE</th>
+      <th>STATUS</th>
+      <th colspan='2'>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% vendors.each.with_index(1) do |vendor, index| %>
+      <tr data-link="<%= worklist_url(vendor) %>" class='cursor' >
+        <td><%= index %></td>
+        <td><%= vendor.vendor %></td>
+        <td><%= vendor.sales_phone %></td>
+        <td><%= vendor.city %></td>
+        <td><%= vendor.ms_vendor_type.type_name rescue 'No Data' %></td>
+        <td><%= status_vendor(vendor.vendor_status) %></td>
+        <td class='centered not-include'>
+          <%= link_to 'VERIFY', verify_worklist_url(vendor), class: 'btn btn-success open-modal', remote: true %>
+        </td>
+        <td class='centered not-include'>
+          <%= link_to 'DECLINE', decline_worklist_url(vendor), class: 'btn btn-danger open-modal', remote: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

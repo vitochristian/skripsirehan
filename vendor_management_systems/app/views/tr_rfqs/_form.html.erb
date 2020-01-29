@@ -1,0 +1,78 @@
+<%= form_with(model: tr_rfq, local: true) do |form| %>
+  <% if tr_rfq.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tr_rfq.errors.count, "error") %> prohibited this tr_rfq from being saved:</h2>
+
+      <ul>
+      <% tr_rfq.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ms_vendor_type_id %>
+    <%= form.select :ms_vendor_type_id, @ms_vendor_types %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_rfq %>
+    <%= form.text_field :no_rfq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :need_by_date %>
+    <%= form.date_select :need_by_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiration_date %>
+    <%= form.date_select :expiration_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term_of_payment %>
+    <%= form.select :term_of_payment , [30,60] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.text_field :qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uom %>
+    <%= form.select :uom , ['pcs','pack','kg','m'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note , "Note From Buyer" %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_name %>
+    <%= form.text_field :item_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_site %>
+    <%= form.text_field :delivery_site %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Cancel', tr_rfqs_path %>
+    <%= form.submit 'Submit' %>
+  </div>
+<% end %>

@@ -1,0 +1,61 @@
+<%= f.hidden_field :step, value: 'company_address' %>
+<%= f.fields_for :ms_vendor_addresses do |ff| %>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :address_name, 'Address Name' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.select :address_name, ['Head Office', 'Factory', 'Branch'], { include_blank: 'Choose Address Name' }, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :address, 'Address' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.text_field :address, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :city, 'City' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.text_field :city, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :province, 'Province' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.text_field :province, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :country, 'Country' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.text_field :country, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= ff.label :postal_code, 'Postal Code' "<font class='font-red'>*</font>".html_safe %>
+    </div>
+    <div class='col-sm-9'>
+      <%= ff.text_field :postal_code, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class='col-sm-offset-3 col-sm-9'>
+      <%= ff.link_to_remove do %>
+        <span class='fa fa-trash fa-lg' id='min'></span> Delete
+      <% end -%>
+    </div>
+  </div>
+<% end -%>
+<%= f.link_to_add :ms_vendor_addresses do %>
+  <h3 class='btn btn-warning mb' id='max'><span class='fa fa-plus fa-sm' aria-hidden='true'></span> Add Address</h3>
+<% end %>

@@ -1,0 +1,10 @@
+<% vendors.each.with_index(1) do |vendor, index| %>
+  <tr data-link="<%= edit_vendor_url(vendor) %>" class='cursor' >
+    <td><%= index %></td>
+    <td><%= vendor.vendor %></td>
+    <td><%= vendor.sales_phone %></td>
+    <td><%= vendor.city %></td>
+    <td><%= vendor.ms_vendor_type.type_name rescue 'No Data' %></td>
+    <td><%= status_vendor(vendor.vendor_status) %></td>
+  </tr>
+<% end %>

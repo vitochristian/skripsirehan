@@ -1,0 +1,48 @@
+<div class='form-panel-third'>
+  <div class='row'>
+    <!-- <h4><span class='fa fa-angle-right'></span> Edit Vendor</h4> -->
+    <div class='wizard'>
+
+      <ul class='main-menu' style="float: none; margin-bottom: 50px;">
+        <li>
+          <%= link_to 'Company Profile', edit_vendor_path(@ms_vendor), id: 'company_profile' %>
+        </li>
+        <li>
+          <%= link_to 'Company Address', edit_vendor_path(@ms_vendor, step: 'company_address'), id: 'company_address' %>
+        </li>
+        <li>
+          <%= link_to 'Legal Aspect', edit_vendor_path(@ms_vendor, step: 'legal_aspect'), id: 'legal_aspect' %>
+        </li>
+        <li>
+          <%= link_to 'Finance Aspect', edit_vendor_path(@ms_vendor, step: 'finance_aspect'), id: 'finance_aspect' %>
+        </li>
+        <li>
+          <%= link_to 'Password', edit_vendor_path(@ms_vendor, step: 'password'), id: 'password' %>
+        </li>
+      </ul>
+    </div>
+    <%= nested_form_for(@ms_vendor, url: @path, method: @method, html: { class: 'form-horizontal', style: 'margin-top: 20px;' }) do |f| %>
+      <%= f.hidden_field :is_active, value: true %>
+      <%= render "#{@ms_vendor.current_step}", :f => f %>
+      <div class='action-button'>
+        <%= f.submit 'Save', class: 'btn btn-warning', data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end -%>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+    var step = "<%= @ms_vendor.current_step %>"
+    if (step == 'company_profile'){
+      $('#company_profile').addClass('active')
+    } else if ((step == 'company_address')){ 
+      $('#company_address').addClass('active')
+    } else if ((step == 'legal_aspect')){
+      $('#legal_aspect').addClass('active')
+    } else if ((step == 'finance_aspect')){
+      $('#finance_aspect').addClass('active')
+    } else {
+      $('#password').addClass('active')
+    }
+  });
+</script>

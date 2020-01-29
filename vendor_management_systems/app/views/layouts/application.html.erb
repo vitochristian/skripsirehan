@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portal Vendor</title>
+    <%= favicon_link_tag 'nutrifood-logo-small.png' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% unless params[:controller] == 'authentications' %>
+      <%= render 'layouts/header', cache: true %>
+    <% end %>
+    <div class="content content-container">
+      <div class="center">
+        <% if notice %>
+          <p class="alert alert-success alert-dismissible fade in">
+            <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= notice %>
+          </p>
+        <% elsif alert %>
+          <p class="alert alert-danger alert-dismissible fade in">
+            <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= alert %> 
+          </p>
+        <% end -%>
+      </div>
+      <div class="content-container-small">
+        <%#= render_breadcrumbs %>
+      </div>    
+    </div>
+    <%= yield %>
+  </body>
+  <footer>
+    Copyrights 2019 &copy; iGeeks Tribe All rights reserved.
+  </footer>
+</html>

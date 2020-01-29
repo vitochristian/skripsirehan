@@ -1,0 +1,30 @@
+<div class='modal fade' id='modal-verify' role='dialog'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal'>&times;</button>
+        <h4 class='modal-title'><span class='fa fa-angle-right' aria-hidden='true'></span> Please Set the Username</h4>
+      </div>
+      <%= form_for vendor, url: path, html: { class: 'form-horizontal', role: 'form' }, remote: true do |f| %>
+        <div class='modal-body'>
+          <div class='form-group'>
+            <div class='col-sm-3 control-label'>
+              <%= f.label :username, 'Username' "<font class='font-red'>*</font>".html_safe %>
+            </div>
+            <div class='col-sm-9'>
+              <%= f.text_field :username, value: f.object.username? ? f.object.username : username, class: 'form-control', required: true %>
+            </div>
+          </div>
+        </div>
+        <%= f.hidden_field :vendor_status, value: 2 %>
+        <%= f.hidden_field :potential_status, value: true %>
+        <%= f.hidden_field :potential_desc, value: 'Potensial' %>
+        <%= f.hidden_field :created_by, value: 1 %>
+        <%= f.hidden_field :updated_by, value: 1 %>
+        <div class='modal-footer'>
+          <%= f.submit 'Submit', class: 'btn btn-warning pull-right', data: { confirm: 'Apakah Anda yakin dengan perubahan ini? ' }  %>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+</div>

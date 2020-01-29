@@ -1,0 +1,14 @@
+I"R(function() {
+  $(document).on('turbolinks:load', function() {
+    return $(function() {
+      var url;
+      url = window.location;
+      $('ul.main-menu a[href="' + url + '"]').addClass('active');
+      $('ul.main-menu a').filter(function() {
+        return this.href === url;
+      }).addClass('active');
+    });
+  });
+
+}).call(this);
+:ET

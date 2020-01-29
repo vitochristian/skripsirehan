@@ -1,0 +1,21 @@
+<div class='login-page'>
+  <div class='form-login'>
+    <h2 class='form-login-heading'><span class='fa fa-angle-right' aria-hidden='true'></span> Reset Password</h2>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'form-horizontal', role: :form }) do |f| %>
+      <div class='login-wrap'>
+        <%= f.text_field :sales_email, autofocus: true, class:'form-control', placeholder:'Email' %>
+        <br>
+        <div class='row'>
+          <div class='col-xs-12'>
+            <%= f.submit 'Reset Password', class: 'btn btn-warning btn-block btn-flat' %>
+          </div>
+        </div>
+        <br>
+        <label>
+          Already have login and password?
+          <%= link_to 'Sign in', new_session_path(resource_name) %>
+        </label>
+      </div>
+    <% end %>
+  </div>
+</div>

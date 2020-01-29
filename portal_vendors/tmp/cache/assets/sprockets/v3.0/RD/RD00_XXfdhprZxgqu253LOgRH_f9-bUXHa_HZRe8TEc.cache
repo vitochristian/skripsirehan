@@ -1,0 +1,34 @@
+I"–(function() {
+  $(document).on("turbolinks:load", function() {
+    return $(function() {
+      var add_button, max_fields, phone_count, toggleAddLink, wrapper, x;
+      max_fields = 3;
+      wrapper = $('.input-fields-wrap');
+      add_button = $('.add-field-button');
+      x = 1;
+      toggleAddLink = function() {
+        add_button.toggle(phone_count < max_fields);
+      };
+      $(add_button).click(function(e) {
+        e.preventDefault();
+        if (x < max_fields) {
+          x++;
+          $(wrapper).append('<div class="form-group delete"><div class="col-sm-6 vendor_phone"><input id="ms_vendor_phone_' + x + '" class="form-control" type="text" name="ms_vendor[phone_' + x + ']"  placeholder="Example: +62 85288876001"/><a href="#" class="remove-field">Remove</a></div></div>');
+          phone_count += 1;
+          toggleAddLink();
+        }
+      });
+      $(wrapper).on('click', '.remove-field', function(e) {
+        e.preventDefault();
+        $(this).parents('.delete').remove();
+        x--;
+        phone_count -= 1;
+        toggleAddLink();
+      });
+      phone_count = $('.vendor_phone').length;
+      toggleAddLink();
+    });
+  });
+
+}).call(this);
+:ET

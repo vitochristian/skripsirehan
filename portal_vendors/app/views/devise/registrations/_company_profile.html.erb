@@ -1,0 +1,79 @@
+<div class='form-group'>
+  <div class='col-sm-6'>
+    <%= f.label :vendor, 'Company Name' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :vendor, class: 'form-control' %>
+  </div>
+  <div class='col-sm-6'>
+    <%= f.label :website %>
+    <%= f.text_field :website, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-6'>
+    <%= f.label :ms_vendor_type_id, 'Vendor Type' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.select :ms_vendor_type_id, @ms_vendor_types, { include_blank: 'Choose Vendor Type' }, class: 'form-control' %>
+  </div>
+  <div class='col-sm-6'>
+    <%= f.label :fax %>
+    <%= f.text_field :fax, class: 'form-control', placeholder: 'Example: +622129635700' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-6'>
+    <%= f.label :phone %>
+    <%= f.text_field :phone_1, class: 'form-control vendor_phone', placeholder: 'Example: +6285288876001' %>
+  </div>
+</div>
+<div class='input-fields-wrap'>
+</div>
+<button class='btn btn-warning add-field-button'><span class='fa fa-plus'></span>Add Phone</button>
+<h6><i>Sales Contact Person</i></h6>
+<div class='form-group'>
+  <div class='col-sm-4'>
+    <%= f.label :sales_tittle, 'Tittle' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.select :sales_tittle, ['Mr.', 'Mrs.', 'Ms.'], { include_blank: 'Choose Tittle' }, class: 'form-control' %>
+  </div>
+  <div class='col-sm-4'>
+    <%= f.label :sales_name, 'Name' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :sales_name, class: 'form-control' %>
+  </div>
+  <div class='col-sm-4'>
+    <%= f.label :sales_job, 'Job Title' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :sales_job, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-6'>
+    <%= f.label :sales_phone, 'Phone Number' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :sales_phone, class: 'form-control', placeholder: 'Example: +6285288876001' %>
+  </div>
+  <div class='col-sm-6'>
+    <%= f.label :sales_email, 'Email' "<font class='font-red'>*</font> (for correspondence purpose. PO submission and etc)".html_safe %>
+    <%= f.text_field :sales_email, class: 'form-control' %>
+  </div>
+</div>
+<h6><i>Finance Contact Person</i></h6>
+<div class='form-group'>
+  <div class='col-sm-4'>
+    <%= f.label :finance_tittle, 'Tittle' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.select :finance_tittle, ['Mr.', 'Mrs.', 'Ms.'], { include_blank: 'Choose Tittle' }, class: 'form-control' %>
+  </div>
+  <div class='col-sm-4'>
+    <%= f.label :finance_name, 'Name' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :finance_name, class: 'form-control' %>
+  </div>
+  <div class='col-sm-4'>
+    <%= f.label :finance_job, 'Job Title' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :finance_job, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-6'>
+    <%= f.label :finance_phone, 'Phone Number' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :finance_phone, class: 'form-control', placeholder: 'Example: +6285288876001' %>
+  </div>
+  <div class='col-sm-6'>
+    <%= f.label :finance_email, 'Email' "<font class='font-red'>*</font>".html_safe %>
+    <%= f.text_field :finance_email, class: 'form-control' %>
+  </div>
+</div>

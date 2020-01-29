@@ -1,0 +1,43 @@
+<div class="hidden-form">
+  <%= f.fields_for :ms_vendor_documents do |doc| %>
+    <div class='form-group'>  
+      <div class='col-sm-3 control-label'>
+        <%= doc.label :document_name, 'Document Name' "<font class='font-red'>*</font>".html_safe %>
+      </div>    
+      <div class='col-sm-3'>
+        <%= doc.text_field :document_name, class: 'form-control' %>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='col-sm-3 control-label'>
+        <%= doc.label :document, 'Document' %>
+      </div>
+      <% file_path = doc.object.document.path %>
+      <% if (File.exist?(file_path) && !file_path.include?('tmp') rescue false) %>
+        <div class='col-sm-1'>
+          <%= link_to "Document", get_image(doc.object, 'document'), target: :_blank %>
+        </div>
+      <% end %>
+      <div class='col-sm-2'>
+        <%= doc.file_field :document %>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='col-sm-odocset-3 col-sm-9'>
+        <%= doc.link_to_remove do %>
+          <span class='fa fa-trash fa-lg' id='min'></span> Delete
+        <% end -%>
+      </div>
+    </div>
+  <% end -%>
+  <%= f.link_to_add :ms_vendor_documents do %>
+    <h3 class='btn btn-warning mb' id='max'><span class='fa fa-plus fa-sm' aria-hidden='true'></span> Add Document</h3>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  var myFunc = function() {
+    $('.remove_nested_fields').show();
+  };
+  $(document).on('turbolinks:load', myFunc);
+</script>

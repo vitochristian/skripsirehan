@@ -1,0 +1,2 @@
+$('.modal-vendor').html('<%= escape_javascript(render partial: 'modal_decline', locals: { vendor: @vendor, path: decline_vendor_worklist_url }) %>');
+$('#modal-decline').modal().show();

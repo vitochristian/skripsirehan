@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_name: MyString
+  type_desc: MyString
+  is_active: false
+  created_by: 
+  updated_by: 
+
+two:
+  type_name: MyString
+  type_desc: MyString
+  is_active: false
+  created_by: 
+  updated_by: 

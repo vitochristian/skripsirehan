@@ -1,0 +1,40 @@
+<header class='header white-bg'>
+  <a href='/' class='logo'><%= image_tag('nutrifood-logo-small.png')%> <b>Portal Vendor</b></a>
+  <div class='top-menu'>
+    <%# if ms_vendor_signed_in? %>
+      <ul class='main-menu'>
+        <li>
+          <%#= link_to 'Inquiries', 'http://localhost:3000/inquiries', class:
+        "#{'active' if params[:controller] == 'wek'}" %>
+        </li>
+        <li>
+          <%#= link_to 'Products & Services', 'http://localhost:3000/products_and_services', class:
+        "#{'active' if params[:controller] == 'wek'}" %>
+        </li>
+        <li>
+          <%#= link_to 'Vendor Info', 'http://localhost:3000/vendors/97/edit', class:
+        "#{'active' if params[:controller] == 'vendor'}" %>
+        </li>
+        <li><%= link_to 'Worklist', worklists_url %></li>
+        <li><%= link_to 'Vendor', vendors_url %></li>
+      </ul>
+      <ul class='nav pull-right top-menu'>
+        <li>
+          <span class='float-left user-name'><strong>Welcome, admin.vms<%#= link_to current_ms_vendor.vendor, edit_ms_vendor_registration_url, data: { turbolinks: false } %></strong></span>
+        </li>
+        <li>
+          <%= link_to 'Logout', logout_path, class: 'logout btn btn-warning' %>
+        </li>
+      </ul>
+    <%# else %>
+      <ul class='pull-right menu-login'>
+        <li>
+          <%#= link_to 'Login', ms_vendor_session_path, class: 'login btn btn-warning' %>
+        </li>
+        <li>
+          <%#= link_to 'Register', new_registration_path(resource_name), class: 'login btn btn-warning' %>
+        </li>
+      </ul>
+    <%# end -%>
+  </div>
+</header>

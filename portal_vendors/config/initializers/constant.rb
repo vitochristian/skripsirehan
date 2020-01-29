@@ -1,0 +1,8 @@
+# API
+if Rails.env.development?
+  API_KEY = 'e1843339a60e2f8ddb75093a56a1c7806299f292cbee9786068ccf290259149d071d9981af3a56ddbde4cba7fe58b6d9b5ad8ff83cd067f41bb91646f5dfd38f'
+elsif Rails.env.staging?
+  API_KEY = 'e1843339a60e2f8ddb75093a56a1c7806299f292cbee9786068ccf290259149d071d9981af3a56ddbde4cba7fe58b6d9b5ad8ff83cd067f41bb91646f5dfd38f'
+elsif Rails.env.production?
+  API_KEY = 'e1843339a60e2f8ddb75093a56a1c7806299f292cbee9786068ccf290259149d071d9981af3a56ddbde4cba7fe58b6d9b5ad8ff83cd067f41bb91646f5dfd38f'
+end

@@ -1,0 +1,198 @@
+<h4><b>Tax Address</b></h4><br>
+
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :office_location, 'Office Location' %>
+  </div>
+  <div class='col-sm-1'>
+    <%= f.radio_button :office_location, 'indonesia', checked: true, class: 'form-control', style: "height: 22px;", onclick: "countrySelection(this.value);" %>
+  </div>
+  <div class='col-sm-2 control-label'>
+    Indonesia
+  </div>
+  <div class='col-sm-1'>
+    <%= f.radio_button :office_location, 'overseas', class: 'form-control', style: "height: 22px;", onclick: "countrySelection(this.value);" %>
+  </div>  
+  <div class='col-sm-3 control-label'>
+    Overseas
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :entity, 'Entity' %>
+  </div>
+  <div class='col-sm-1'>
+    <%= f.radio_button :entity, 'company', checked: true, class: 'form-control', style: "height: 22px;", onclick: "entitySelection(this.value);" %>
+  </div>
+  <div class='col-sm-2 control-label'>
+    Company
+  </div>
+  <div class='col-sm-1'>
+    <%= f.radio_button :entity, 'personal', class: 'form-control', style: "height: 22px;", onclick: "entitySelection(this.value);" %>
+  </div>  
+  <div class='col-sm-3 control-label'>
+    Personal
+  </div>
+</div>
+<p class="tax-message" style="color: red">
+  <i><%= 'Non-Indonesian supplier is not required to fill the tax form.' %></i><br>
+  <i><%= 'Please click "submit".' %></i>
+</p>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :npwp_name, 'NPWP Name' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :npwp_name, class: 'form-control country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :npwp_number, 'NPWP Number' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :npwp_number, class: 'form-control country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :tax_address, 'Address' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :tax_address, class: 'form-control country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :tax_city, 'City' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :tax_city, class: 'form-control country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :tax_province, 'Province' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :tax_province, class: 'form-control country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :tax_postal_code, 'Postal Code' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :tax_postal_code, class: 'form-control country-selection' %>
+  </div>
+</div>
+<!-- <div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%#= f.label :tax_country, 'Country' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%#= f.text_field :tax_country, class: 'form-control country-selection' %>
+  </div>
+</div> -->
+<div class='form-group hidden-form'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :doc_npwp, 'NPWP' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.file_field :doc_npwp, class: 'country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form company'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :doc_skt_sppkp, 'SKT/SPPKP' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.file_field :doc_skt_sppkp, class: 'country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form company'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :doc_siup_iut_iui, 'SIUP/IUT/IUI' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.file_field :doc_siup_iut_iui, class: 'country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form company'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :doc_tdp, 'TDP' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.file_field :doc_tdp, class: 'country-selection' %>
+  </div>
+</div>
+<div class='form-group hidden-form personal'>
+  <div class='col-sm-3'>
+    <%= f.label :doc_ktp, 'KTP' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <% if (File.exist?(@ms_vendor.send('doc_ktp').path) rescue false) %>
+    <div class='col-sm-2'>
+      <%= link_to "Vendor KTP", get_image(@ms_vendor, 'doc_ktp'), target: :_blank %>
+    </div>
+  <% end %>
+  <div class='col-sm-7'>
+    <%= f.file_field :doc_ktp, class: 'country-selection', disabled: check_currency %>
+  </div>
+</div>
+
+<%= render 'vendors/documents', :f => f %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#ms_vendor_npwp_number").inputmask("99.999.999.9-999.999");
+    $(".tax-message").hide();
+    
+    <% if @ms_vendor.entity == 'company' || @ms_vendor.entity == '' || @ms_vendor.entity.nil? %>
+      company_enable();
+    <% else %>
+      company_disabled();
+    <% end %>
+  });
+
+  function countrySelection(country){
+    if (country == 'overseas'){
+      overseas_enable();
+    } else if (country == 'indonesia'){
+      $(".country-selection").prop( "disabled", false );
+      $(".tax-message").hide();      
+      $(".hidden-form").show();
+
+      if(document.getElementById('ms_vendor_entity_company').checked){
+        company_enable();
+      } else {
+        company_disabled();
+      }
+    }
+  }
+
+  function entitySelection(entity){
+    if(document.getElementById('ms_vendor_office_location_indonesia').checked){
+      if (entity == 'company'){
+        company_enable();
+      } else if (entity == 'personal'){
+        company_disabled();
+      }
+    }
+  }
+
+  function company_enable(){
+    $(".company").show();
+    $(".personal").hide();
+  }
+
+  function company_disabled(){
+    $(".company").hide();
+    $(".personal").show();
+  }
+
+  function overseas_enable(){
+    $(".tax-message").show();
+    $(".country-selection").prop( "disabled", true );    
+    $(".hidden-form").hide();
+  }
+</script>

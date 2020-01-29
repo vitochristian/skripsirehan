@@ -1,0 +1,26 @@
+I"ú(function() {
+  $(document).on("turbolinks:load", function() {
+    return $(function() {
+      var $addLink, $removeLink, fieldsCount, maxFieldsCount, toggleAddLink;
+      maxFieldsCount = 2;
+      $addLink = $('a.add_nested_fields');
+      $removeLink = $('a.remove_nested_fields');
+      toggleAddLink = function() {
+        $addLink.toggle(fieldsCount <= maxFieldsCount);
+      };
+      $(document).on('nested:fieldAdded', function() {
+        fieldsCount += 1;
+        toggleAddLink();
+      });
+      $(document).on('nested:fieldRemoved', function() {
+        fieldsCount -= 1;
+        toggleAddLink();
+      });
+      fieldsCount = $('form .fields').length;
+      toggleAddLink();
+      $removeLink.toggle(fieldsCount === 0);
+    });
+  });
+
+}).call(this);
+:ET

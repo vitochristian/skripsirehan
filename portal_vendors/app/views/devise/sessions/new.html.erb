@@ -1,0 +1,32 @@
+<div class='form-login'>
+  <h2 class='form-login-heading'><%= image_tag('nutrifood-logo.png')%></h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class='login-wrap'>
+      <%= f.text_field :username, class:'form-control', placeholder:'Username' %>
+      <br>
+      <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
+      <label class='checkbox passw'>
+        <div class='checkbox'>
+          <label>
+            <% if devise_mapping.rememberable? -%>
+              <%= f.check_box :remember_me %>
+              &nbsp; Remember Me
+            <% end -%>
+          </label>
+          <%= link_to 'Forgot Password?', new_ms_vendor_password_url, class: 'pull-right' %>
+        </div>
+      </label>
+      <%#= recaptcha_tags %>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <%= f.submit 'Sign In', class: 'btn btn-warning btn-block btn-flat'  %>
+        </div>
+      </div>
+      <br>
+      <label>
+        New to Portal Vendor?
+        <%= link_to 'Sign up now', new_registration_path(resource_name)  %>
+      </label>
+    </div>
+  <% end %>
+</div>

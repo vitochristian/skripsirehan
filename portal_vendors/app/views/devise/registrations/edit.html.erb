@@ -1,0 +1,44 @@
+<div class='form-panel-third'>
+  <div class='row'>
+    <h4><span class='fa fa-angle-right'></span> Vendor Registration</h4>
+    <div class='wizard'>
+      <ul class='less-padding'>
+        <li id='company_profile'>1. Company Profile</li>
+        <li><span class='fa fa-angle-right'></li>
+        <li id='company_address'>2. Company Address</li>
+        <li><span class='fa fa-angle-right'></li>
+        <li id='legal_aspect'>3. Legal Aspect</li>
+        <li><span class='fa fa-angle-right'></li>
+        <li id='finance_aspect'>4. Finance Aspect</li>
+      </ul>
+    </div>
+    <%= nested_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal' }) do |f| %>
+      <%= f.hidden_field :is_active, value: true %>
+      <%#= f.hidden_field :created_by, value: current_ms_user.id %>
+      <%#= f.hidden_field :updated_by, value: current_ms_user.id %>
+      <%= render "#{@ms_vendor.current_step}", :f => f %>
+      <div class='action-button'>
+        <%= f.submit 'Back', name: :back_button, class: 'btn btn-warning' unless @ms_vendor.first_step? %>
+        <% if @ms_vendor.last_step? %>
+          <%= f.submit 'Submit', class: 'btn btn-warning', data: { confirm: 'Are you sure to submit?' } %>
+        <% else %>
+          <%= f.submit 'Continue', class: 'btn btn-warning' %>
+        <% end -%>
+      </div>
+    <% end -%>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+    var step = "<%= @ms_vendor.current_step %>"
+    if (step == 'company_profile'){
+      $('#company_profile').addClass('active')
+    } else if ((step == 'company_address')){ 
+      $('#company_profile, #company_address').addClass('active')
+    } else if ((step == 'legal_aspect')){
+      $('#company_profile, #company_address, #legal_aspect').addClass('active')
+    } else {
+      $('#company_profile, #company_address, #legal_aspect, #finance_aspect').addClass('active')
+    }
+  });
+</script>

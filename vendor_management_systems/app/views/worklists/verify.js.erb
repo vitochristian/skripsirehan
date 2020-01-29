@@ -1,0 +1,2 @@
+$('.modal-vendor').html('<%= escape_javascript(render partial: 'modal_verify', locals: { vendor: @vendor, path: verify_vendor_worklist_url, username: @username }) %>');
+$('#modal-verify').modal().show();

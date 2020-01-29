@@ -1,0 +1,11 @@
+I"(function() {
+  $(document).on('turbolinks:load', function() {
+    return $(function() {
+      return $('tr[data-link] td:not(.not-include)').click(function() {
+        window.location = $(this).parent().data('link');
+      });
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,105 @@
+<%= f.hidden_field :step, value: 'finance_aspect' %>
+<p class="tax-message" style="color: red">
+  <i><%= 'Please fill with your receiveable bank account' %></i><br>
+</p>
+
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_name, 'Bank Name' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :bank_name, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_city, 'City/Regency' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :bank_city, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_acc_type, 'Account Type' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.select :bank_acc_type, ['Company', 'Goverment', 'Personal'], { include_blank: 'Choose Account Type' }, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_acc_number, 'Account Number' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :bank_acc_number, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_acc_name, 'Account Name' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :bank_acc_name, class: 'form-control' %>
+  </div>
+</div>
+<div class='form-group'>
+  <div class='col-sm-3 control-label'>
+    <%= f.label :currency, 'Currency' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-3'>
+    <%= select_tag :currency_select, options_for_select(['EUR', 'GBP', 'IDR', 'JPY', 'MYR', 'SGD', 'USD', 'Others'], @ms_vendor.currency), prompt: 'Choose Currency', class: 'form-control', onchange: 'set_value(this.value);' %>
+  </div>
+  <div class='col-sm-3'>
+    <%= f.text_field :currency, class: 'form-control', placeholder: 'Example: USD'  %>
+  </div>
+</div>
+<div class='form-group' id="swift_code_div">
+  <div class='col-sm-3 control-label'>
+    <%= f.label :bank_swift_code, 'Swift Code' "<font class='font-red'>*</font>".html_safe %>
+  </div>
+  <div class='col-sm-9'>
+    <%= f.text_field :bank_swift_code, class: 'form-control' %>
+  </div>
+</div>
+<br/><br/>
+<div class='form-group'>
+  <div class='col-sm-3'>
+    <%= f.label :account_document, 'Account Document' %>
+  </div>
+  <% if (File.exist?(@ms_vendor.send('account_document').path) rescue false) %>
+    <div class='col-sm-2'>
+      <%= link_to "Account Document", get_image(@ms_vendor, 'account_document'), target: :_blank %>
+    </div>
+  <% end %>
+  <div class='col-sm-2'>
+    <%= f.file_field :account_document %>
+  </div>
+</div>
+<script type="text/javascript">
+  $( document ).ready(function() {
+    <% if ['EUR', 'GBP', 'IDR', 'JPY', 'MYR', 'SGD', 'USD'].include?(@ms_vendor.currency) || @ms_vendor.currency.nil? %>
+      $("#ms_vendor_currency").hide();
+    <% end %>
+    <% if @ms_vendor.currency.upcase == 'IDR' %>
+      $("#swift_code_div").hide();
+    <% end %>
+  });
+
+  function set_value(val){
+    if (val == 'Others'){
+      $("#ms_vendor_currency").val('');
+      $("#ms_vendor_currency").show();
+      // $("#currency_select").hide();
+    } else {
+      $("#ms_vendor_currency").val(val);
+      $("#ms_vendor_currency").hide();
+    }
+
+    if (val == 'IDR'){
+      $("#swift_code_div").hide();
+    } else {
+      $("#swift_code_div").show();
+    }
+  }
+</script>

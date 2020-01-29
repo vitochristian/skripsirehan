@@ -1,0 +1,52 @@
+<header class='header white-bg'>
+  <a href='/' class='logo'><%= image_tag('nutrifood-logo-small.png')%> <b>Portal Vendor</b></a>
+  <div class='top-menu'>
+    <% if ms_vendor_signed_in? %>
+      <ul class='main-menu'>
+        <% if current_ms_vendor.vendor == 'admin.vms' %>
+          <li>
+            <%= link_to 'Worklist', 'http://localhost:4000/worklists', class:
+          "#{'active' if params[:controller] == 'wek'}" %>
+          </li>
+          <li>
+            <%= link_to 'Vendor', 'http://localhost:4000/vendors', class:
+          "#{'active' if params[:controller] == 'wok'}" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to 'Inquiries', inquiries_path, class:
+          "#{'active' if params[:controller] == 'inquiries'}" %>
+          </li>
+          <li>
+            <%= link_to 'Products & Services', products_and_services_path, class:
+          "#{'active' if params[:controller] == 'products_and_services'}" %>
+          </li>
+          <li>
+            <%= link_to 'Vendor Info', edit_vendor_path(current_ms_vendor), class:
+          "#{'active' if params[:controller] == 'vendors'}" %>
+          </li>
+        <% end %>
+      </ul>
+      <ul class='nav pull-right top-menu'>
+        <!-- <li>
+          <span class='float-left user-name'><strong>Welcome, <%#= link_to current_ms_vendor.vendor, edit_ms_vendor_registration_url, data: { turbolinks: false } %></strong></span>
+        </li> -->
+        <li>
+          <span class='float-left user-name'><strong>Welcome, <%= current_ms_vendor.vendor %></strong></span>
+        </li>
+        <li>
+          <%= link_to 'Logout', destroy_ms_vendor_session_url, method: :delete, class: 'logout btn btn-warning' %>
+        </li>
+      </ul>
+    <% else %>
+      <ul class='pull-right menu-login'>
+        <li>
+          <%= link_to 'Login', ms_vendor_session_path, class: 'login btn btn-warning' %>
+        </li>
+        <li>
+          <%= link_to 'Register', new_registration_path(resource_name), class: 'login btn btn-warning' %>
+        </li>
+      </ul>
+    <% end -%>
+  </div>
+</header>

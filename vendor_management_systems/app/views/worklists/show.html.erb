@@ -1,0 +1,388 @@
+<div class='form-panel-third'>
+  <div class='row'>
+    <h4><span class='fa fa-angle-right'></span> Company Detail</h4>
+      
+    <div id='register' class='form-horizontal'>
+      <fieldset disabled='true'>
+        <h4>Company Profile</h4>
+        <div class='form-group'>
+          <div class='col-sm-6'>
+            <%= label_tag :vendor, 'Company Name' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :vendor, @vendor.vendor, class: 'form-control' %>
+          </div>
+          <div class='col-sm-6'>
+            <%= label_tag :website %>
+            <%= text_field_tag :website, @vendor.website, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-6'>
+            <%= label_tag :ms_vendor_type_id, 'Vendor Type' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :ms_vendor_type_id, @vendor.ms_vendor_type.type_name, class: 'form-control' %>
+          </div>
+          <div class='col-sm-6'>
+            <%= label_tag :fax %>
+            <%= text_field_tag :fax, @vendor.fax, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-6'>
+            <%= label_tag :phone %>
+            <%= text_field_tag :phone_1, @vendor.phone_1, class: 'form-control' %>
+            <%= text_field_tag :phone_2, @vendor.phone_2, class: 'form-control' %>
+            <%= text_field_tag :phone_3, @vendor.phone_3, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class='col-sm-12'><h6><i>Sales Contact Person</i></h6></div>
+        <div class='form-group'>
+          <div class='col-sm-4'>
+            <%= label_tag :sales_tittle, 'Tittle' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :sales_tittle, @vendor.sales_tittle, class: 'form-control' %>
+          </div>
+          <div class='col-sm-4'>
+            <%= label_tag :sales_name, 'Name' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :sales_name, @vendor.sales_name, class: 'form-control' %>
+          </div>
+          <div class='col-sm-4'>
+            <%= label_tag :sales_job, 'Job Title' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :sales_job, @vendor.sales_job, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-6'>
+            <%= label_tag :sales_phone, 'Phone Number' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :sales_phone, @vendor.sales_phone, class: 'form-control' %>
+          </div>
+          <div class='col-sm-6'>
+            <%= label_tag :sales_email, 'Email' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :sales_email, @vendor.sales_email, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='col-sm-12'><h6><i>Finance Contact Person</i></h6></div>
+        <div class='form-group'>
+          <div class='col-sm-4'>
+            <%= label_tag :finance_tittle, 'Tittle' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :finance_tittle, @vendor.finance_tittle, class: 'form-control' %>
+          </div>
+          <div class='col-sm-4'>
+            <%= label_tag :finance_name, 'Name' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :finance_name, @vendor.finance_name, class: 'form-control' %>
+          </div>
+          <div class='col-sm-4'>
+            <%= label_tag :finance_job, 'Job Title' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :finance_job, @vendor.finance_job, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-6'>
+            <%= label_tag :finance_phone, 'Phone Number' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :finance_phone, @vendor.finance_phone, class: 'form-control' %>
+          </div>
+          <div class='col-sm-6'>
+            <%= label_tag :finance_email, 'Email' "<font class='font-red'>*</font>".html_safe %>
+            <%= text_field_tag :finance_email, @vendor.finance_email, class: 'form-control' %>
+          </div>
+        </div>
+
+        <h4>Company Address</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Address Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Province</th>
+              <th>Country</th>
+              <th>Postal Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @vendor.ms_vendor_addresses.each.with_index(1) do |ms_vendor_address, index| %>
+            <tr>
+              <td><%= index %></td>
+              <td><%= ms_vendor_address.address_name %></td>
+              <td><%= ms_vendor_address.address %></td>
+              <td><%= ms_vendor_address.city %></td>
+              <td><%= ms_vendor_address.province %></td>
+              <td><%= ms_vendor_address.country %></td>
+              <td><%= ms_vendor_address.postal_code %></td>
+            </tr>
+            <% end -%>
+          </tbody>
+        </table>
+          
+        <h4>Legal Aspect</h4>
+
+        <div class='form-group'>
+          <div class='col-sm-3 control-label'>
+            <%= label_tag :office_location, 'Office Location' %>
+          </div>
+          <div class='col-sm-1'>
+            <%= radio_button_tag :office_location, 'indonesia', @vendor.office_location == 'indonesia', class: 'form-control', style: "height: 22px;" %>
+          </div>
+          <div class='col-sm-2 control-label'>
+            Indonesia
+          </div>
+          <div class='col-sm-1'>
+            <%= radio_button_tag :office_location, 'overseas', @vendor.office_location == 'overseas', class: 'form-control', style: "height: 22px;" %>
+          </div>  
+          <div class='col-sm-3 control-label'>
+            Overseas
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3 control-label'>
+            <%= label_tag :entity, 'Entity' %>
+          </div>
+          <div class='col-sm-1'>
+            <%= radio_button_tag :entity, 'company', @vendor.entity == 'company', class: 'form-control', style: "height: 22px;" %>
+          </div>
+          <div class='col-sm-2 control-label'>
+            Company
+          </div>
+          <div class='col-sm-1'>
+            <%= radio_button_tag :entity, 'personal', @vendor.entity == 'personal', class: 'form-control', style: "height: 22px;" %>
+          </div>  
+          <div class='col-sm-3 control-label'>
+            Personal
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :tax_address, 'Address' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :tax_address, @vendor.tax_address, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :tax_city, 'City' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :tax_city, @vendor.tax_city, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :tax_province, 'Province' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :tax_province, @vendor.tax_province, class: 'form-control' %>
+          </div>
+        </div>
+        <!-- <div class='form-group'>
+          <div class='col-sm-3'>
+            <%#= label_tag :tax_country, 'Country' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%#= text_field_tag :tax_country, @vendor.tax_country, class: 'form-control' %>
+          </div>
+        </div> -->
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :tax_postal_code, 'Postal Code' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :tax_postal_code, @vendor.tax_postal_code, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :npwp_name, 'NPWP Name' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :npwp_name, @vendor.npwp_name, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :npwp_number, 'NPWP Number' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :npwp_number, @vendor.npwp_number, class: 'form-control', id: 'ms_vendor_npwp_number' %>
+          </div>
+        </div>
+        <div class='form-group hidden-form'>
+          <div class='col-sm-3'>
+            <%= label_tag :doc_npwp, 'NPWP' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <% if (File.exist?(@vendor.send('doc_npwp').path) rescue false) || check_file(@vendor.id, 'doc_npwp') %>
+              <%= link_to "Vendor NPWP Doc", get_image(@vendor, 'doc_npwp'), target: :_blank %>
+            <% end %>
+          </div>
+        </div>
+        <div class='form-group hidden-form company'>
+          <div class='col-sm-3'>
+            <%= label_tag :doc_skt_sppkp, 'SKT/SPPKP' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <% if (File.exist?(@vendor.send('doc_skt_sppkp').path) rescue false) || check_file(@vendor.id, 'doc_skt_sppkp') %>
+              <%= link_to "Vendor SKT/SPPKP", get_image(@vendor, 'doc_skt_sppkp'), target: :_blank %>
+            <% end %>
+          </div>
+        </div>
+        <div class='form-group hidden-form company'>
+          <div class='col-sm-3'>
+            <%= label_tag :doc_siup_iut_iui, 'SIUP/IUT/IUI' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <% if (File.exist?(@vendor.send('doc_siup_iut_iui').path) rescue false) || check_file(@vendor.id, 'doc_siup_iut_iui') %>
+              <%= link_to "Vendor SIUP/IUT/IUI", get_image(@vendor, 'doc_siup_iut_iui'), target: :_blank %>
+            <% end %>
+          </div>
+        </div>
+        <div class='form-group hidden-form company'>
+          <div class='col-sm-3'>
+            <%= label_tag :doc_tdp, 'TDP' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <% if (File.exist?(@vendor.send('doc_tdp').path) rescue false) || check_file(@vendor.id, 'doc_tdp') %>
+              <%= link_to "Vendor TDP", get_image(@vendor, 'doc_tdp'), target: :_blank %>
+            <% end %>
+          </div>
+        </div>
+        <div class='form-group hidden-form personal'>
+          <div class='col-sm-3'>
+            <%= label_tag :doc_ktp, 'KTP' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <% if (File.exist?(@vendor.send('doc_ktp').path) rescue false) || check_file(@vendor.id, 'doc_ktp') %>
+              <%= link_to "Vendor KTP", get_image(@vendor, 'doc_ktp'), target: :_blank %>
+            <% end %>
+          </div>
+        </div>
+
+        <h4>Other Documents</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Document Name</th>
+              <th>Document</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @vendor.ms_vendor_documents.each.with_index(1) do |document, index| %>
+              <tr>
+                <td><%= index %></td>
+                <td><%= document.document_name %></td>
+                <td><%= link_to "Document ##{index}", "#{BASE_URL}/api/images/#{document.id}?format=document", target: :_blank %></td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table>
+
+
+        <h4>Finance Aspect</h4>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_acc_type, 'Account Type' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_acc_type, @vendor.bank_acc_type, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_city, 'City/Regency' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_city, @vendor.bank_city, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_name, 'Bank Name' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_name, @vendor.bank_name, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_acc_name, 'Account Name' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_acc_name, @vendor.bank_acc_name, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_acc_number, 'Account Number' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_acc_number, @vendor.bank_acc_number, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class='col-sm-3'>
+            <%= label_tag :bank_swift_code, 'Swift Code' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-9'>
+            <%= text_field_tag :bank_swift_code, @vendor.bank_swift_code, class: 'form-control' %>
+          </div>
+        </div>        
+        <div class='form-group'>
+          <div class='col-sm-3 control-label'>
+            <%= label_tag :currency, 'Currency' "<font class='font-red'>*</font>".html_safe %>
+          </div>
+          <div class='col-sm-3'>
+            <%= text_field_tag :currency, @vendor.currency,class: 'form-control', placeholder: 'Example: USD'  %>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#ms_vendor_npwp_number").inputmask("99.999.999.9-999.999");
+    <% if @vendor.office_location == 'overseas' %>
+      overseas_enable();
+    <% else %>
+      overseas_disabled();      
+      <% if @vendor.entity == 'company' || @vendor.entity == '' || @vendor.entity.nil? %>
+        company_enable();
+      <% else %>
+        company_disabled();
+      <% end %>
+    <% end %>
+  });
+
+  function entitySelection(entity){
+    if(document.getElementById('ms_vendor_office_location_indonesia').checked){
+      if (entity == 'company'){
+        company_enable();
+      } else if (entity == 'personal'){
+        company_disabled();
+      }
+    }
+  }
+
+  function company_enable(){
+    $(".company").show();
+    $(".personal").hide();
+  }
+
+  function company_disabled(){
+    $(".company").hide();
+    $(".personal").show();
+  }
+
+  function overseas_disabled(){    
+    $(".country-selection").prop( "disabled", false );
+    $(".tax-message").hide();
+    $(".hidden-form").show();
+  }
+
+  function overseas_enable(){
+    $(".tax-message").show();
+    $(".country-selection").prop( "disabled", true );
+    $(".hidden-form").hide();
+  }
+</script>

@@ -1,0 +1,22 @@
+<p>Dear <%= @vendor.vendor %>,</p>
+<p>
+  Terima kasih telah menginput Company Profile perusahaan anda di database kami.<br>
+  Berikut adalah login dan password perusahan anda.
+</p>
+<p>
+  <b>Username: </b>
+  <%= @vendor.username %>
+</p>
+<p>
+  <b>Password: </b>
+  <%= @password %>
+</p>
+<p>
+  Akses <%= link_to 'portal vendor', MAIL_URL %> untuk mengganti password, lengkapi data, dan upload catalog produk Anda.<br>
+  Jika ada permintaan penawaran, kami akan mengirimkan email secara otomatis, dan silahkan menginput penawaran anda pada aplikasi ini.
+</p>
+<p>
+  Best Regards,<br>
+  Purchasing Dept<br>
+  PT NUTRIFOOD INDONESIA
+</p>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ms_vendor_type_id: 1
+  item_name: MyText
+  delivery_site: MyText
+  note: MyText
+  description: MyText
+  need_by_date: 2020-01-28
+  term_of_payment: 1
+  is_active: false
+  created_by: 1
+  updated_by: 1
+  status: MyString
+
+two:
+  ms_vendor_type_id: 1
+  item_name: MyText
+  delivery_site: MyText
+  note: MyText
+  description: MyText
+  need_by_date: 2020-01-28
+  term_of_payment: 1
+  is_active: false
+  created_by: 1
+  updated_by: 1
+  status: MyString

@@ -1,0 +1,77 @@
+<div class='form-panel-third'>
+  <div class='row'>
+    <div class='form-group'>
+      <div class='col-sm-12'>
+        <h4>
+          Document(s) Template
+        </h4>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='col-sm-12'>
+        Please download the document(s) below and fill it completely before uploading it
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='col-sm-3'>
+        Product Catalog
+      </div>
+      <div class='col-sm-9'>
+        <%= link_to 'catalog.xlxs', download_template_products_and_service_path(@ms_vendor), target: :_blank %>
+      </div>
+    </div>
+    <% if @ms_vendor.vendor_type.downcase.include?('packaging') %>
+      <div class='form-group'>
+        <div class='col-sm-3'>
+          Profile Supplier Packaging
+        </div>
+        <div class='col-sm-9'>
+          <%= link_to 'psp.doc', download_template_products_and_service_path(@ms_vendor, type: 'psp'), target: :_blank %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br/><br/><br/>
+  <div class='row'>
+    <div class='form-group'>
+      <div class='col-sm-12'>
+        <h4>
+          Document Upload
+        </h4>
+      </div>
+    </div>
+    <%= nested_form_for(@ms_vendor, url: products_and_service_path(@ms_vendor), method: :put, html: { class: 'form-horizontal', style: 'margin-top: 20px;' }) do |f| %>
+      <div class='form-group' style="margin-left: 0px;">
+        <div class='col-sm-3'>
+          <%= f.label :doc_catalog, 'Catalog Document' %>
+        </div>
+        <% if (File.exist?(@ms_vendor.send('doc_catalog').path) rescue false) %>
+          <div class='col-sm-2'>
+            <%= link_to "catalog", get_image(@ms_vendor, 'doc_catalog'), target: :_blank %>
+          </div>
+        <% end %>
+        <div class='col-sm-7'>
+          <%= f.file_field :doc_catalog %>
+        </div>
+      </div>
+      <% if @ms_vendor.vendor_type.downcase.include?('packaging') %>
+        <div class='form-group' style="margin-left: 0px;">
+          <div class='col-sm-3'>
+            <%= f.label :doc_psp, 'PSP Document' %>
+          </div>
+          <% if (File.exist?(@ms_vendor.send('doc_psp').path) rescue false) %>
+            <div class='col-sm-2'>
+              <%= link_to "psp", get_image(@ms_vendor, 'doc_psp'), target: :_blank %>
+            </div>
+          <% end %>
+          <div class='col-sm-7'>
+            <%= f.file_field :doc_psp %>
+          </div>
+        </div>
+      <% end %>   
+      <div class='col-sm-5' style="text-align: right">
+        <%= f.submit 'Submit', class: 'btn btn-warning' %>
+      </div>
+    <% end %>
+  </div>
+</div>

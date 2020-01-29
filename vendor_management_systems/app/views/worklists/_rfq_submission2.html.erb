@@ -1,0 +1,39 @@
+
+<table>
+  <thead>
+    <tr>
+      <th colspan='8'> 
+        <h3 class='btn btn-warning mb' id='min'>
+          <span class='fa fa-plus fa-sm' aria-hidden='true'></span> 
+          <%= link_to 'Add RFQ', new_tr_rfq_path %>
+        </h3>
+      </th>
+    </tr> 
+    <tr>
+      <th colspan='8' class='title'>LIST RFQ </th>
+    </tr>
+    <tr>
+      <th>RFQ ID</th>
+      <th>ITEM NAME</th>
+      <th>DESCRIPTION</th>
+      <th>QUANTITY</th>
+      <th>CREATED DATE</th>
+      <th>EXPIRATION DATE</th>
+        <%#= f.link_to_add :ms_vendor_addresses do %>
+    </tr>
+
+    <% @tr_rfqs.each do |rfq| %> 
+      <tr>
+        <td><%= rfq.no_rfq %></td>
+        <td><%= rfq.item_name %></td>
+        <td><%= rfq.description %></td>
+        <td><%= rfq.qty %></td>
+        <td><%= rfq.created_at %></td>
+        <td><%= rfq.expiration_date %></td>
+      </tr>
+    <% end %>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>

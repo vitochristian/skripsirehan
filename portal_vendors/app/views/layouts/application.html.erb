@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portal Supplier</title>
+    <%= favicon_link_tag 'nutrifood-logo-small.png' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header', cache: true if ms_vendor_signed_in? %>
+    <div class="content content-container">
+      <div class="center">
+        <% if notice %>
+          <p class="alert alert-success alert-dismissible fade in">
+            <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= notice %>
+          </p>
+        <% elsif alert %>
+          <p class="alert alert-danger alert-dismissible fade in">
+            <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= alert %>
+          </p>
+        <% end -%>
+        <% if params[:controller] == 'inquiries' && !@document %>
+          <p class="alert alert-danger">
+            <a href="javascript:;" class="close" data-dismiss="alert" aria-label="close" onclick="closeErrorMessage();">&times;</a>
+             Please upload your "Account Document" <%= link_to 'here', edit_vendor_path(current_ms_vendor, step: 'finance_aspect') %>
+          </p>
+        <% end %>
+        <% if params[:controller] == 'products_and_services' && @flag %>
+          <p class="alert alert-danger">
+            <a href="javascript:;" class="close" data-dismiss="alert" aria-label="close" onclick="closeErrorMessage();">&times;</a>
+             Please upload your service(s) document
+          </p>
+        <% end %>
+      </div>
+      <div class="content-container-small">
+        <%#= render_breadcrumbs %>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+  <footer>
+    Copyrights 2019 &copy; iGeeks Tribe All rights reserved.
+  </footer>
+
+  <script type="text/javascript">
+    function closeErrorMessage(){
+      $(".alert").remove();
+    }
+  </script>
+</html>
