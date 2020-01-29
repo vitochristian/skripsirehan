@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offered qty:</strong>
+  <%= @tr_rfq_submission_dtl.offered_qty %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tr_rfq_submission_dtl.price %>
+</p>
+
+<p>
+  <strong>Tr rfq submission:</strong>
+  <%= @tr_rfq_submission_dtl.tr_rfq_submission_id %>
+</p>
+
+<%= link_to 'Edit', edit_tr_rfq_submission_dtl_path(@tr_rfq_submission_dtl) %> |
+<%= link_to 'Back', tr_rfq_submission_dtls_path %>

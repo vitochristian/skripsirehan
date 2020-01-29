@@ -1,0 +1,92 @@
+<%= form_with(model: tr_rfq, local: true) do |form| %>
+  <% if tr_rfq.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tr_rfq.errors.count, "error") %> prohibited this tr_rfq from being saved:</h2>
+
+      <ul>
+      <% tr_rfq.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item_name %>
+    <%= form.text_area :item_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ms_vendor_type_id %>
+    <%= form.number_field :ms_vendor_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_sie %>
+    <%= form.text_area :delivery_sie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :need_by_date %>
+    <%= form.date_select :need_by_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term_of_payment %>
+    <%= form.number_field :term_of_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_by %>
+    <%= form.number_field :created_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_by %>
+    <%= form.number_field :updated_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiration_date %>
+    <%= form.date_select :expiration_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.number_field :qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uom %>
+    <%= form.text_field :uom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_rfq %>
+    <%= form.text_field :no_rfq %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

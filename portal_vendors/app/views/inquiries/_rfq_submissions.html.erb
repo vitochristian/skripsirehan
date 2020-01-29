@@ -1,0 +1,12 @@
+<% @tr_rfq.each do |item| %>
+	<tr>
+		<td><%= item.id %></td>
+		<td><%= item.item_name %></td>
+		<td><%= item.description %></td>
+		<td><%= item.qty %></td>
+		<td><%= item.expiration_date %></td>
+		<td><%= item.need_by_date %></td>
+		<td><%= item.status %></td>
+		<td><%= link_to '+ Quotation', new_tr_rfq_submission_path(item.id), class: 'btn btn-warning' %></td>
+	</tr>
+<% end -%>

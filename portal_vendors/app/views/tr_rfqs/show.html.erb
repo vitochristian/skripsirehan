@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @tr_rfq.item_name %>
+</p>
+
+<p>
+  <strong>Ms vendor type:</strong>
+  <%= @tr_rfq.ms_vendor_type_id %>
+</p>
+
+<p>
+  <strong>Delivery sie:</strong>
+  <%= @tr_rfq.delivery_sie %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @tr_rfq.note %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tr_rfq.description %>
+</p>
+
+<p>
+  <strong>Need by date:</strong>
+  <%= @tr_rfq.need_by_date %>
+</p>
+
+<p>
+  <strong>Term of payment:</strong>
+  <%= @tr_rfq.term_of_payment %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @tr_rfq.is_active %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @tr_rfq.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @tr_rfq.updated_by %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tr_rfq.status %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @tr_rfq.expiration_date %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @tr_rfq.qty %>
+</p>
+
+<p>
+  <strong>Uom:</strong>
+  <%= @tr_rfq.uom %>
+</p>
+
+<p>
+  <strong>No rfq:</strong>
+  <%= @tr_rfq.no_rfq %>
+</p>
+
+<%= link_to 'Edit', edit_tr_rfq_path(@tr_rfq) %> |
+<%= link_to 'Back', tr_rfqs_path %>

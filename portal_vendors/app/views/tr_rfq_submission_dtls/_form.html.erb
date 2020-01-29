@@ -1,0 +1,32 @@
+<%= form_with(model: tr_rfq_submission_dtl, local: true) do |form| %>
+  <% if tr_rfq_submission_dtl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tr_rfq_submission_dtl.errors.count, "error") %> prohibited this tr_rfq_submission_dtl from being saved:</h2>
+
+      <ul>
+      <% tr_rfq_submission_dtl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :offered_qty %>
+    <%= form.number_field :offered_qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tr_rfq_submission_id %>
+    <%= form.number_field :tr_rfq_submission_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

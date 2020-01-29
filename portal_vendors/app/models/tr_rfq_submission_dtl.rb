@@ -1,0 +1,2 @@
+class TrRfqSubmissionDtl < ApplicationRecord
+end

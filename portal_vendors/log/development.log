@@ -13167,3 +13167,2028 @@ Processing by VendorsController#edit as HTML
 Completed 200 OK in 99ms (Views: 71.6ms | ActiveRecord: 8.4ms)
 
 
+Started GET "/" for ::1 at 2020-01-29 20:32:39 +0700
+  [1m[35mSQL (10.5ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35mSQL (1.5ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ bin/rails:11
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateTrRfqSubmissions (20200129132959)
+  [1m[35mSQL (4.8ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE [tr_rfq_submissions] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [bidding_types] nvarchar(4000), [description] nvarchar(max), [need_by_date] datetime, [term_of_payment] integer, [no_quotation] nvarchar(4000), [incoterms] nvarchar(4000), [note] nvarchar(max), [is_active] bit, [created_by] bigint, [updated_by] bigint, [created_at] datetime NOT NULL, [updated_at] datetime NOT NULL)[0m
+  ↳ db/migrate/20200129132959_create_tr_rfq_submissions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[35mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) OUTPUT INSERTED.[version] VALUES (@0)', N'@0 nvarchar(4000)', @0 = N'20200129132959'[0m  [["version", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (12.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ar_internal_metadata].* FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = @0  ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'environment', @1 = 1[0m  [["key", nil], ["LIMIT", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (15.0ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35mSQL (1.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation')[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_on_blob_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_uniqueness'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_blobs_on_key'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_email'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_reset_password_token'[0m
+  ↳ bin/rails:11
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_cas_ticket'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_session_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_updated_at'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_attachments', NULL[0m
+  ↳ bin/rails:11
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT update_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT delete_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.0ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_blobs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (3.1ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_items', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_role_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_roles', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_users', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_addresses', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_documents', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_types', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendors', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'sessions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_categories', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (3.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submissions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfqs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (6.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_vendor_categories', NULL[0m
+  ↳ bin/rails:11
+Started GET "/" for ::1 at 2020-01-29 20:37:31 +0700
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/login" for ::1 at 2020-01-29 20:37:32 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2056.0ms)
+Completed 200 OK in 2719ms (Views: 2498.7ms | ActiveRecord: 121.1ms)
+
+
+Started POST "/login" for ::1 at 2020-01-29 20:37:42 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mAOgrtS0Aj+loYw+l/4KXYFCkvNy8OeDcE3QJ0KDeSKP29PBxuA4Q7TRTC5kGuPly4I1eE72V4ll9FfOxYR1jQ==", "ms_vendor"=>{"username"=>"vendor", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mMsVendor Load (5.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[username] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'vendor', @1 = 1[0m  [["username", nil], ["LIMIT", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (1.7ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendor Update (7.0ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [current_sign_in_at] = @0, [last_sign_in_at] = @1, [sign_in_count] = @2, [updated_at] = @3 WHERE [ms_vendors].[id] = @4; SELECT @@ROWCOUNT AS AffectedRows', N'@0 datetime, @1 datetime, @2 int, @3 datetime, @4 bigint', @0 = '01-29-2020 13:37:42.663', @1 = '01-29-2020 10:52:14.093', @2 = 29, @3 = '01-29-2020 13:37:42.666', @4 = 125[0m  [["current_sign_in_at", nil], ["last_sign_in_at", nil], ["sign_in_count", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (2.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendorType Load (6.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 641ms (ActiveRecord: 56.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 20:37:43 +0700
+  [1m[36mMsVendor Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (4.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 91ms (Views: 81.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:38:03 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.6ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (12.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (57.8ms)
+  Rendered vendors/edit.html.erb within layouts/application (81.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 237ms (Views: 186.6ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 20:38:05 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (11.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 155ms (Views: 128.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 20:38:05 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (10.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+Completed 200 OK in 114ms (Views: 88.2ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 20:38:06 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (44.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 165ms (Views: 88.7ms | ActiveRecord: 49.6ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 20:38:09 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (8.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 108ms (Views: 76.1ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:38:22 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (10.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (2.8ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (7.4ms)
+  Rendered vendors/edit.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 181ms (Views: 111.6ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:43:02 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (6.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (5.3ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.2ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (4.7ms)
+  Rendered vendors/edit.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 16.5ms)
+
+
+  
+SyntaxError (/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:21: syntax error, unexpected '<', expecting ')'
+        </li>
+        ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:22: unknown regexp option - l
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:23: syntax error, unexpected '<'
+      <ul class='nav pull-right top-...
+      ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:24: syntax error, unexpected '<'
+        <!-- <li>
+        ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:24: syntax error, unexpected '<'
+        <!-- <li>
+             ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:25: syntax error, unexpected '<'
+... class='float-left user-name'><strong>Welcome, <%#= link_to ...
+...                              ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:25: syntax error, unexpected ',', expecting ')'
+...eft user-name'><strong>Welcome, <%#= link_to current_ms_vend...
+...                              ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:50: unterminated string meets end of file
+          end
+              ^
+/mnt/e/Thesis/Rehan/skripsirehan/portal_vendors/app/views/layouts/_header.html.erb:50: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/layouts/_header.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/layouts/_header.html.erb:22: unknown regexp option - l
+app/views/layouts/_header.html.erb:23: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:24: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:24: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:25: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_header.html.erb:50: unterminated string meets end of file
+app/views/layouts/_header.html.erb:50: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__4526133624677397670_70134233831960'
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:43:14 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (3.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (4.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (3.9ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (4.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (3.9ms)
+  Rendered vendors/edit.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 145ms (Views: 97.4ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/tr_rfq_submissions" for ::1 at 2020-01-29 20:43:17 +0700
+Processing by TrRfqSubmissionsController#index as HTML
+  [1m[36mMsVendor Load (3.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/index.html.erb within layouts/application
+  [1m[36mTrRfqSubmission Load (6.6ms)[0m  [1m[34mSELECT [tr_rfq_submissions].* FROM [tr_rfq_submissions][0m
+  ↳ app/views/tr_rfq_submissions/index.html.erb:23
+  Rendered tr_rfq_submissions/index.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 148ms (Views: 79.1ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:43:25 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (4.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (5.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (8.1ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.4ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (7.8ms)
+  Rendered vendors/edit.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 177ms (Views: 112.9ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 20:43:34 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (9.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 113ms (Views: 77.7ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 20:44:19 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (7.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 117ms (Views: 95.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/tr_rfq_submissions" for ::1 at 2020-01-29 20:44:22 +0700
+Processing by TrRfqSubmissionsController#index as HTML
+  [1m[36mMsVendor Load (3.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/index.html.erb within layouts/application
+  [1m[36mTrRfqSubmission Load (4.1ms)[0m  [1m[34mSELECT [tr_rfq_submissions].* FROM [tr_rfq_submissions][0m
+  ↳ app/views/tr_rfq_submissions/index.html.erb:23
+  Rendered tr_rfq_submissions/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 114ms (Views: 82.0ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/tr_rfq_submissions" for ::1 at 2020-01-29 20:44:28 +0700
+Processing by TrRfqSubmissionsController#index as HTML
+  [1m[36mMsVendor Load (3.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (17.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/index.html.erb within layouts/application
+  [1m[36mTrRfqSubmission Load (1.6ms)[0m  [1m[34mSELECT [tr_rfq_submissions].* FROM [tr_rfq_submissions][0m
+  ↳ app/views/tr_rfq_submissions/index.html.erb:23
+  Rendered tr_rfq_submissions/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 128ms (Views: 88.0ms | ActiveRecord: 22.7ms)
+
+
+  [1m[35mSQL (4.3ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ bin/rails:11
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+Migrating to AddStatusColumnToTrRfqSubmission (20200129135031)
+  [1m[35mSQL (5.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE [tr_rfq_submissions] ADD [status] nvarchar(4000)[0m
+  ↳ db/migrate/20200129135031_add_status_column_to_tr_rfq_submission.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[35mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) OUTPUT INSERTED.[version] VALUES (@0)', N'@0 nvarchar(4000)', @0 = N'20200129135031'[0m  [["version", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (20.5ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ar_internal_metadata].* FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = @0  ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'environment', @1 = 1[0m  [["key", nil], ["LIMIT", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (1.6ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35mSQL (4.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation')[0m
+  ↳ bin/rails:11
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_on_blob_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_uniqueness'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_blobs_on_key'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_email'[0m
+  ↳ bin/rails:11
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_reset_password_token'[0m
+  ↳ bin/rails:11
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_cas_ticket'[0m
+  ↳ bin/rails:11
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_session_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_updated_at'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_attachments', NULL[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT update_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT delete_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_blobs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_items', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (7.0ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (3.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_role_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_roles', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_users', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_addresses', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_documents', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (3.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_types', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendors', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'sessions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_categories', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submissions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfqs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (10.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_vendor_categories', NULL[0m
+  ↳ bin/rails:11
+Started GET "/inquiries" for ::1 at 2020-01-29 20:55:15 +0700
+  [1m[35mSQL (4.1ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.5ms)
+  Rendered inquiries/_rfq_submissions.html.erb (5.3ms)
+  Rendered inquiries/index.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 396ms (ActiveRecord: 164.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134237230480'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134236991900'
+  [1m[35mSQL (1.3ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  [1m[36mTrRfq Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [tr_rfqs].* FROM [tr_rfqs]  ORDER BY [tr_rfqs].[id] ASC OFFSET 0 ROWS FETCH NEXT @0 ROWS ONLY', N'@0 int', @0 = 11[0m  [["LIMIT", nil]]
+Started GET "/inquiries" for ::1 at 2020-01-29 20:56:01 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (4.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (12.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  Rendered inquiries/_rfq_submissions.html.erb (4.3ms)
+  Rendered inquiries/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <%= @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134241033620'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134240898720'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:56:13 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.3ms)
+  Rendered inquiries/_rfq_submissions.html.erb (2.5ms)
+  Rendered inquiries/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 172.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <%= @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134233895180'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134233759300'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:56:27 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (3.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (7.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  Rendered inquiries/_rfq_submissions.html.erb (3.7ms)
+  Rendered inquiries/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 10.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134203123240'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134203220700'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:56:46 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (4.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (6.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  Rendered inquiries/_rfq_submissions.html.erb (553.8ms)
+  Rendered inquiries/index.html.erb within layouts/application (560.4ms)
+Completed 500 Internal Server Error in 589ms (ActiveRecord: 11.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tr_rfq' for #<#<Class:0x00007f92cc2ddf28>:0x00007f92c40a15a0>
+Did you mean?  tr_rfq_url):
+    1: <% tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134165623400'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134165475100'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:57:51 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (4.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (1.0ms)
+  Rendered inquiries/_rfq_submissions.html.erb (6.5ms)
+  Rendered inquiries/index.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 8.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134201177200'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134201127260'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:58:01 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.3ms)
+  Rendered inquiries/_rfq_submissions.html.erb (4.7ms)
+  Rendered inquiries/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 151.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70368473691700'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70368472777320'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:58:14 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (8.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.3ms)
+  Rendered inquiries/_rfq_submissions.html.erb (6.2ms)
+  Rendered inquiries/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 150.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tr_rfq.each do |item| %>
+    2: 	<tr>
+    3: 		<td><%= item.id %></td>
+    4: 		<td><%= item.item_name %></td>
+  
+app/views/inquiries/_rfq_submissions.html.erb:1:in `_app_views_inquiries__rfq_submissions_html_erb___1448341880474426473_70134244726040'
+app/views/inquiries/index.html.erb:15:in `_app_views_inquiries_index_html_erb___246139835814517473_70134244660920'
+Started GET "/inquiries" for ::1 at 2020-01-29 20:58:42 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (5.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (7.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.3ms)
+  [1m[36mTrRfq Load (2.8ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (69.8ms)
+  Rendered inquiries/index.html.erb within layouts/application (75.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 541ms (Views: 177.2ms | ActiveRecord: 215.5ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:00:39 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (4.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.6ms)
+  [1m[36mTrRfq Load (4.1ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (66.1ms)
+  Rendered inquiries/index.html.erb within layouts/application (71.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 394ms (Views: 101.7ms | ActiveRecord: 189.9ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:00:54 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.5ms)
+  [1m[36mTrRfq Load (6.2ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (11.3ms)
+  Rendered inquiries/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 157ms (Views: 128.3ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:00:56 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (80.7ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (83.9ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 249ms (Views: 176.9ms | ActiveRecord: 43.4ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:01:51 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (5.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.3ms)
+  [1m[36mTrRfq Load (6.7ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (9.4ms)
+  Rendered inquiries/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 119ms (Views: 90.1ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:01:58 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.8ms)
+  [1m[36mTrRfq Load (1.9ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (5.4ms)
+  Rendered inquiries/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 132ms (Views: 107.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:02:54 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (7.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (9.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (8.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 159ms (Views: 116.1ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:02:59 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (4.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.5ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 150ms (Views: 97.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:04:01 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (5.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (9.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.5ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 120ms (Views: 90.8ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:04:55 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (3.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (84.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (88.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 209ms (Views: 190.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:07:05 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (3.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (15.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.6ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 188ms (Views: 150.8ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:07:13 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (10.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (9.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 120ms (Views: 85.9ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:07:23 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (7.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (9.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.6ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 137ms (Views: 107.6ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:08:47 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (5.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (13.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 8.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    45:     <%= form.label :note %>
+    46:     <%= form.text_area :note %>
+    47:   </div>
+    48:     <%= form.hidden_field :created_by, value: @current_ms_user.id %>
+    49:     <%= form.hidden_field :updated_by, value: @current_ms_user.id %>
+    50:   <div class="actions">
+    51:     <%= form.submit %>
+  
+app/views/tr_rfq_submissions/_form.html.erb:48:in `block in _app_views_tr_rfq_submissions__form_html_erb___1221121437906652131_70134070387200'
+app/views/tr_rfq_submissions/_form.html.erb:1:in `_app_views_tr_rfq_submissions__form_html_erb___1221121437906652131_70134070387200'
+app/views/tr_rfq_submissions/new.html.erb:3:in `_app_views_tr_rfq_submissions_new_html_erb___1599467884679967344_70134070267660'
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:09:20 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (3.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.7ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    45:     <%= form.label :note %>
+    46:     <%= form.text_area :note %>
+    47:   </div>
+    48:     <%= form.hidden_field :created_by, value: @current_user.id %>
+    49:     <%= form.hidden_field :updated_by, value: @current_user.id %>
+    50:   <div class="actions">
+    51:     <%= form.submit %>
+  
+app/views/tr_rfq_submissions/_form.html.erb:48:in `block in _app_views_tr_rfq_submissions__form_html_erb___1221121437906652131_70134240042940'
+app/views/tr_rfq_submissions/_form.html.erb:1:in `_app_views_tr_rfq_submissions__form_html_erb___1221121437906652131_70134240042940'
+app/views/tr_rfq_submissions/new.html.erb:3:in `_app_views_tr_rfq_submissions_new_html_erb___1599467884679967344_70134239921820'
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:11:59 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (3.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.9ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 128ms (Views: 108.1ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/tr_rfq_submissions" for ::1 at 2020-01-29 21:12:21 +0700
+Processing by TrRfqSubmissionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZuaSIYioYHI5XM3zdmb0lpME4MGC+vGzaKiU3xaFve/u5D5XGZnPYwvQP0vA7s0LTxKOeKRjYnRkBaB/7a8Fog==", "tr_rfq_submission"=>{"bidding_types"=>"As Requested", "description"=>"test", "need_by_date(1i)"=>"2020", "need_by_date(2i)"=>"1", "need_by_date(3i)"=>"29", "term_of_payment"=>"10000", "no_quotation"=>"tes123", "incoterms"=>"CIP", "note"=>"halo!", "created_by"=>"125", "updated_by"=>"125"}, "commit"=>"Create Tr rfq submission"}
+  [1m[36mMsVendor Load (10.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[35mSQL (1.2ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/tr_rfq_submissions_controller.rb:31
+  [1m[36mTrRfqSubmission Create (2.7ms)[0m  [1m[35mEXEC sp_executesql N'INSERT INTO [tr_rfq_submissions] ([bidding_types], [description], [need_by_date], [term_of_payment], [no_quotation], [incoterms], [note], [created_by], [updated_by], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10)', N'@0 nvarchar(4000), @1 nvarchar(max), @2 datetime, @3 int, @4 nvarchar(4000), @5 nvarchar(4000), @6 nvarchar(max), @7 bigint, @8 bigint, @9 datetime, @10 datetime', @0 = N'As Requested', @1 = N'test', @2 = '01-29-2020 00:00:00.0', @3 = 10000, @4 = N'tes123', @5 = N'CIP', @6 = N'halo!', @7 = 125, @8 = 125, @9 = '01-29-2020 14:12:21.706', @10 = '01-29-2020 14:12:21.706'[0m  [["bidding_types", nil], ["description", nil], ["need_by_date", nil], ["term_of_payment", nil], ["no_quotation", nil], ["incoterms", nil], ["note", nil], ["created_by", nil], ["updated_by", nil], ["created_at", nil], ["updated_at", nil]]
+  ↳ app/controllers/tr_rfq_submissions_controller.rb:31
+  [1m[35mSQL (2.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/tr_rfq_submissions_controller.rb:31
+Redirected to http://localhost:3000/tr_rfq_submissions/1
+Completed 302 Found in 49ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/tr_rfq_submissions/1" for ::1 at 2020-01-29 21:12:21 +0700
+Processing by TrRfqSubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMsVendor Load (4.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mTrRfqSubmission Load (10.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [tr_rfq_submissions].* FROM [tr_rfq_submissions] WHERE [tr_rfq_submissions].[id] = @0  ORDER BY [tr_rfq_submissions].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 1, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/tr_rfq_submissions_controller.rb:68
+  Rendering tr_rfq_submissions/show.html.erb within layouts/application
+  Rendered tr_rfq_submissions/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 146ms (Views: 117.2ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/tr_rfq_submissions/1" for ::1 at 2020-01-29 21:13:49 +0700
+Processing by TrRfqSubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMsVendor Load (5.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mTrRfqSubmission Load (6.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [tr_rfq_submissions].* FROM [tr_rfq_submissions] WHERE [tr_rfq_submissions].[id] = @0  ORDER BY [tr_rfq_submissions].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 1, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/tr_rfq_submissions_controller.rb:68
+  Rendering tr_rfq_submissions/show.html.erb within layouts/application
+  Rendered tr_rfq_submissions/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 718ms (Views: 327.4ms | ActiveRecord: 281.9ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:14:45 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  [1m[36mTrRfq Load (1.7ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (76.2ms)
+  Rendered inquiries/index.html.erb within layouts/application (81.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 182ms (Views: 104.0ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:15:08 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (12.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.8ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 119ms (Views: 84.4ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/tr_rfq_submissions/new" for ::1 at 2020-01-29 21:18:45 +0700
+Processing by TrRfqSubmissionsController#new as HTML
+  [1m[36mMsVendor Load (6.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 421ms (Views: 99.4ms | ActiveRecord: 192.2ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:19:05 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  [1m[36mTrRfq Load (4.9ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (68.9ms)
+  Rendered inquiries/index.html.erb within layouts/application (74.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 177ms (Views: 105.6ms | ActiveRecord: 58.4ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:19:17 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (4.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  [1m[36mTrRfq Load (3.2ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (8.0ms)
+  Rendered inquiries/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 139ms (Views: 117.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:19:19 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (3.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (8.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 149ms (Views: 119.7ms | ActiveRecord: 7.6ms)
+
+
+  [1m[35mSQL (8.0ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ bin/rails:11
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateTrRfqSubmissionDtls (20200129142058)
+  [1m[35mSQL (2.3ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE [tr_rfq_submission_dtls] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [offered_qty] integer, [price] integer, [tr_rfq_submission_id] integer, [created_at] datetime NOT NULL, [updated_at] datetime NOT NULL)[0m
+  ↳ db/migrate/20200129142058_create_tr_rfq_submission_dtls.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[35mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) OUTPUT INSERTED.[version] VALUES (@0)', N'@0 nvarchar(4000)', @0 = N'20200129142058'[0m  [["version", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (2.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (16.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ar_internal_metadata].* FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = @0  ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'environment', @1 = 1[0m  [["key", nil], ["LIMIT", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (2.3ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35mSQL (1.9ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation')[0m
+  ↳ bin/rails:11
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_on_blob_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_uniqueness'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_blobs_on_key'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_email'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_reset_password_token'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_cas_ticket'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_session_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_updated_at'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (7.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_attachments', NULL[0m
+  ↳ bin/rails:11
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT update_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT delete_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.1ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_blobs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (31.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_items', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_role_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.0ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_roles', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_users', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_addresses', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_documents', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_types', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.1ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendors', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'sessions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_categories', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.0ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submission_dtls', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (6.9ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submissions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (5.1ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfqs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.1ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_vendor_categories', NULL[0m
+  ↳ bin/rails:11
+  [1m[35mSQL (1.3ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ bin/rails:11
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+Migrating to AddTrRfqIdColumnToTrRfqSubmission (20200129142238)
+  [1m[35mSQL (11.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE [tr_rfq_submissions] ADD [tr_rfq_id] integer[0m
+  ↳ db/migrate/20200129142238_add_tr_rfq_id_column_to_tr_rfq_submission.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[35mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) OUTPUT INSERTED.[version] VALUES (@0)', N'@0 nvarchar(4000)', @0 = N'20200129142238'[0m  [["version", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (1.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ar_internal_metadata].* FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = @0  ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'environment', @1 = 1[0m  [["key", nil], ["LIMIT", nil]]
+  ↳ bin/rails:11
+  [1m[35mSQL (3.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35mSQL (3.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation')[0m
+  ↳ bin/rails:11
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_on_blob_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_attachments_uniqueness'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_active_storage_blobs_on_key'[0m
+  ↳ bin/rails:11
+  [1m[35m (66.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_email'[0m
+  ↳ bin/rails:11
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_ms_vendors_on_reset_password_token'[0m
+  ↳ bin/rails:11
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_cas_ticket'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_session_id'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [filter_definition] FROM sys.indexes WHERE name = N'index_sessions_on_updated_at'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_attachments', NULL[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT update_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT delete_referential_action_desc FROM sys.foreign_keys WHERE name = 'fk_rails_c3b3935057'[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'active_storage_blobs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_items', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.0ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_role_menus', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_roles', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_users', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (6.3ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_addresses', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (2.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_documents', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.8ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendor_types', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'ms_vendors', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.4ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'sessions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (4.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_categories', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submission_dtls', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (3.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfq_submissions', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (1.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_rfqs', NULL[0m
+  ↳ bin/rails:11
+  [1m[36mExecute Procedure (8.2ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'tr_vendor_categories', NULL[0m
+  ↳ bin/rails:11
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:27:35 +0700
+  [1m[35mSQL (1.4ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 734ms (Views: 380.2ms | ActiveRecord: 187.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:27:49 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.3ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 191ms (Views: 149.5ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:28:20 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (7.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.8ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 198ms (Views: 159.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:28:57 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (9.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (6.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.9ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 161ms (Views: 122.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:29:59 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (117.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (32.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.3ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 361ms (Views: 175.3ms | ActiveRecord: 149.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:33:23 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (7.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 191ms (Views: 153.8ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:34:25 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 149ms (Views: 121.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:35:02 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.8ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 180ms (Views: 149.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:36:41 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.3ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 167ms (Views: 132.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:37:25 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (7.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.9ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 155ms (Views: 122.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:38:44 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (6.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 188ms (Views: 153.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:40:58 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (4.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 208ms (Views: 172.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:41:06 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (10.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (7.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.8ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 161ms (Views: 119.4ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:41:09 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (3.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (28.5ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 201ms (Views: 171.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:42:34 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (12.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.7ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 209ms (Views: 168.9ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:43:08 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (8.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.6ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 172ms (Views: 138.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:43:51 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (5.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.2ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 187ms (Views: 151.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:44:02 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (8.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.9ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 172ms (Views: 138.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 21:46:03 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (5.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.4ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (8.4ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (7.6ms)
+  Rendered vendors/edit.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 184ms (Views: 116.6ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:47:20 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (8.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.5ms)
+  [1m[36mTrRfq Load (4.4ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (64.3ms)
+  Rendered inquiries/index.html.erb within layouts/application (69.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 410ms (Views: 339.8ms | ActiveRecord: 55.2ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 21:47:21 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (5.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/_table_head.html.erb (0.4ms)
+  [1m[36mTrRfq Load (3.1ms)[0m  [1m[34mSELECT [tr_rfqs].* FROM [tr_rfqs][0m
+  ↳ app/views/inquiries/_rfq_submissions.html.erb:1
+  Rendered inquiries/_rfq_submissions.html.erb (8.9ms)
+  Rendered inquiries/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 198ms (Views: 174.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:47:22 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (5.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 154ms (Views: 123.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 21:47:53 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (2.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (2.0ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (9.4ms)
+  Rendered vendors/edit.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 187ms (Views: 130.2ms | ActiveRecord: 14.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:48:13 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (12.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 162ms (Views: 118.8ms | ActiveRecord: 15.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:48:29 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (4.9ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 172ms (Views: 146.7ms | ActiveRecord: 5.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:48:46 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.7ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (26.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 207ms (Views: 159.1ms | ActiveRecord: 22.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:49:00 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (4.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 154ms (Views: 126.6ms | ActiveRecord: 7.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:49:23 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 190ms (Views: 156.7ms | ActiveRecord: 9.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:49:36 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 145ms (Views: 118.6ms | ActiveRecord: 5.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:49:46 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (7.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.5ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (48.9ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 209ms (Views: 174.7ms | ActiveRecord: 9.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 21:57:30 +0700
+  [1m[35mSQL (1.2ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (4.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (7.6ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 202ms (Views: 155.5ms | ActiveRecord: 21.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:01:11 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (7.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.5ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 205ms (Views: 150.3ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:01:19 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 175ms (Views: 145.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:01:57 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (6.8ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 155ms (Views: 127.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:02:41 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (9.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.1ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 156ms (Views: 120.4ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:02:45 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (5.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (7.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 182ms (Views: 143.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/tr_rfq_submissions/new.1" for ::1 at 2020-01-29 22:03:05 +0700
+Processing by TrRfqSubmissionsController#new as 
+  [1m[36mMsVendor Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /home/vitochristian/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering tr_rfq_submissions/new.html.erb within layouts/application
+  Rendered tr_rfq_submissions/_form.html.erb (5.0ms)
+  Rendered tr_rfq_submissions/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 149ms (Views: 120.9ms | ActiveRecord: 5.2ms)
+
+
