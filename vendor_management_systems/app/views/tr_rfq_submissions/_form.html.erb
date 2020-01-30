@@ -1,0 +1,72 @@
+<%= form_with(model: tr_rfq_submission, local: true) do |form| %>
+  <% if tr_rfq_submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tr_rfq_submission.errors.count, "error") %> prohibited this tr_rfq_submission from being saved:</h2>
+
+      <ul>
+      <% tr_rfq_submission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bidding_types %>
+    <%= form.text_field :bidding_types %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :need_by_date %>
+    <%= form.date_select :need_by_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term_of_payment %>
+    <%= form.number_field :term_of_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_quotation %>
+    <%= form.text_field :no_quotation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incoterms %>
+    <%= form.text_field :incoterms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_by %>
+    <%= form.text_field :created_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_by %>
+    <%= form.text_field :updated_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

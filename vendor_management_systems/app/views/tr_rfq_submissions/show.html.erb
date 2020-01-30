@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bidding types:</strong>
+  <%= @tr_rfq_submission.bidding_types %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tr_rfq_submission.description %>
+</p>
+
+<p>
+  <strong>Need by date:</strong>
+  <%= @tr_rfq_submission.need_by_date %>
+</p>
+
+<p>
+  <strong>Term of payment:</strong>
+  <%= @tr_rfq_submission.term_of_payment %>
+</p>
+
+<p>
+  <strong>No quotation:</strong>
+  <%= @tr_rfq_submission.no_quotation %>
+</p>
+
+<p>
+  <strong>Incoterms:</strong>
+  <%= @tr_rfq_submission.incoterms %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @tr_rfq_submission.note %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @tr_rfq_submission.is_active %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @tr_rfq_submission.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @tr_rfq_submission.updated_by %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tr_rfq_submission.status %>
+</p>
+
+<%= link_to 'Edit', edit_tr_rfq_submission_path(@tr_rfq_submission) %> |
+<%= link_to 'Back', tr_rfq_submissions_path %>

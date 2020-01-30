@@ -13167,3 +13167,1068 @@ Processing by VendorsController#edit as HTML
 Completed 200 OK in 99ms (Views: 71.6ms | ActiveRecord: 8.4ms)
 
 
+Started GET "/" for ::1 at 2020-01-29 20:28:23 +0700
+  [1m[35mSQL (1.3ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations]  ORDER BY [schema_migrations].[version] ASC[0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendor Load (5.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+Completed 200 OK in 685ms (Views: 629.2ms | ActiveRecord: 23.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/products_and_services" for ::1 at 2020-01-29 20:28:28 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (7.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 86ms (Views: 68.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:28:45 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (5.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.1ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (11.3ms)
+  Rendered vendors/edit.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 148ms (Views: 117.8ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 20:30:04 +0700
+  [1m[36mMsVendor Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (1.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 96ms (Views: 76.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 20:43:38 +0700
+  [1m[35mSQL (1.4ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendor Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+Completed 200 OK in 117ms (Views: 106.1ms | ActiveRecord: 1.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 20:43:40 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (4.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.1ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.1ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (5.2ms)
+  Rendered vendors/edit.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 201ms (Views: 151.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/vendors/125/edit?step=company_address" for ::1 at 2020-01-29 20:43:43 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"company_address", "id"=>"125"}
+  [1m[36mMsVendor Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (3.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (4.2ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.1ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  [1m[36mMsVendorAddress Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_addresses].* FROM [ms_vendor_addresses] WHERE [ms_vendor_addresses].[ms_vendor_id] = @0', N'@0 bigint', @0 = 125[0m  [["ms_vendor_id", nil]]
+  ↳ app/views/vendors/_company_address.html.erb:2
+  Rendered vendors/_company_address.html.erb (87.5ms)
+  Rendered vendors/edit.html.erb within layouts/application (94.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 176ms (Views: 119.5ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 20:44:22 +0700
+Started GET "/login" for ::1 at 2020-01-29 20:44:22 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendors/125/edit?step=company_address" for ::1 at 2020-01-29 20:46:00 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"company_address", "id"=>"125"}
+  [1m[36mMsVendor Load (2.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (2.1ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (5.2ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  [1m[36mMsVendorAddress Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_addresses].* FROM [ms_vendor_addresses] WHERE [ms_vendor_addresses].[ms_vendor_id] = @0', N'@0 bigint', @0 = 125[0m  [["ms_vendor_id", nil]]
+  ↳ app/views/vendors/_company_address.html.erb:2
+  Rendered vendors/_company_address.html.erb (5.4ms)
+  Rendered vendors/edit.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 122ms (Views: 80.7ms | ActiveRecord: 26.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/vendors/125/edit?step=legal_aspect" for ::1 at 2020-01-29 22:02:22 +0700
+  [1m[35mSQL (1.5ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"legal_aspect", "id"=>"125"}
+  [1m[36mMsVendor Load (5.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (2.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.3ms)[0m  [1m[36mIF @@TRANCOUNT > 0 ROLLBACK TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  [1m[36mMsVendorDocument Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_documents].* FROM [ms_vendor_documents] WHERE [ms_vendor_documents].[ms_vendor_id] = @0', N'@0 int', @0 = 125[0m  [["ms_vendor_id", nil]]
+  ↳ app/views/vendors/_documents.html.erb:2
+  Rendered vendors/_documents.html.erb (55.5ms)
+  Rendered vendors/_legal_aspect.html.erb (341.8ms)
+  Rendered vendors/edit.html.erb within layouts/application (353.2ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 537ms (Views: 423.4ms | ActiveRecord: 46.0ms)
+
+
+Started GET "/vendors/125/edit?step=finance_aspect" for ::1 at 2020-01-29 22:02:24 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"finance_aspect", "id"=>"125"}
+  [1m[36mMsVendor Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.0ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (2.5ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_finance_aspect.html.erb (4.8ms)
+  Rendered vendors/edit.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 125ms (Views: 88.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/vendors/125/edit?step=password" for ::1 at 2020-01-29 22:02:25 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"password", "id"=>"125"}
+  [1m[36mMsVendor Load (3.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.0ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_password.html.erb (2.0ms)
+  Rendered vendors/edit.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 140ms (Views: 107.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 22:02:26 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (5.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 91ms (Views: 74.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 22:02:28 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (5.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 87ms (Views: 65.2ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 22:03:07 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 274ms (Views: 262.0ms | ActiveRecord: 5.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/worklists" for ::1 at 2020-01-29 22:09:48 +0700
+  [1m[35mSQL (2.4ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/worklists"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-29 22:09:53 +0700
+Started GET "/login" for ::1 at 2020-01-29 22:09:53 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 154ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-29 22:09:59 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/TzKyibuwYQ0m8Xum1S9OFkmKzxAArrnan0eZtfGDtMVPW6BUOAwhIkDmo3TKmrADEHchLtd5N5PKLRM+xByQ==", "ms_vendor"=>{"username"=>"vendor", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[username] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'vendor', @1 = 1[0m  [["username", nil], ["LIMIT", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (3.6ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendor Update (3.2ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [current_sign_in_at] = @0, [last_sign_in_at] = @1, [sign_in_count] = @2, [updated_at] = @3 WHERE [ms_vendors].[id] = @4; SELECT @@ROWCOUNT AS AffectedRows', N'@0 datetime, @1 datetime, @2 int, @3 datetime, @4 bigint', @0 = '01-29-2020 15:09:59.456', @1 = '01-29-2020 13:37:42.663', @2 = 30, @3 = '01-29-2020 15:09:59.466', @4 = 125[0m  [["current_sign_in_at", nil], ["last_sign_in_at", nil], ["sign_in_count", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (2.4ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendorType Load (1.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 378ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 22:09:59 +0700
+  [1m[36mMsVendor Load (2.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 96ms (Views: 90.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 22:10:01 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (5.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (4.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 88ms (Views: 68.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 22:10:02 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 92ms (Views: 78.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 22:10:03 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (3.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 87ms (Views: 75.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 22:10:04 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (3.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (8.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.0ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.0ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (4.4ms)
+  Rendered vendors/edit.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 195ms (Views: 63.3ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-29 22:10:05 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (5.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (7.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 116ms (Views: 93.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 23:51:12 +0700
+  [1m[35mSQL (19.0ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendor Load (27.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (25.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+Completed 200 OK in 169ms (Views: 125.5ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-29 23:51:15 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (22.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (25.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 140ms (Views: 80.1ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/vendors/125/edit" for ::1 at 2020-01-29 23:51:32 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mMsVendor Load (33.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (28.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (25.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (29.7ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (37.1ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_company_profile.html.erb (6.2ms)
+  Rendered vendors/edit.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 325ms (Views: 138.8ms | ActiveRecord: 153.5ms)
+
+
+Started GET "/vendors/125/edit?step=company_address" for ::1 at 2020-01-29 23:51:49 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"company_address", "id"=>"125"}
+  [1m[36mMsVendor Load (16753.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (585.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1711.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (387.7ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (2497.2ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  [1m[36mMsVendorAddress Load (47.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_addresses].* FROM [ms_vendor_addresses] WHERE [ms_vendor_addresses].[ms_vendor_id] = @0', N'@0 bigint', @0 = 125[0m  [["ms_vendor_id", nil]]
+  ↳ app/views/vendors/_company_address.html.erb:2
+  Rendered vendors/_company_address.html.erb (54.2ms)
+  Rendered vendors/edit.html.erb within layouts/application (60.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 22092ms (Views: 90.1ms | ActiveRecord: 21983.9ms)
+
+
+Started GET "/vendors/125/edit?step=legal_aspect" for ::1 at 2020-01-29 23:52:32 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"legal_aspect", "id"=>"125"}
+  [1m[36mMsVendor Load (548.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (192.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (198.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (89.8ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (40.1ms)[0m  [1m[36mIF @@TRANCOUNT > 0 ROLLBACK TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  [1m[36mMsVendorDocument Load (99.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_documents].* FROM [ms_vendor_documents] WHERE [ms_vendor_documents].[ms_vendor_id] = @0', N'@0 int', @0 = 125[0m  [["ms_vendor_id", nil]]
+  ↳ app/views/vendors/_documents.html.erb:2
+  Rendered vendors/_documents.html.erb (103.6ms)
+  Rendered vendors/_legal_aspect.html.erb (111.3ms)
+  Rendered vendors/edit.html.erb within layouts/application (117.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 1276ms (Views: 88.9ms | ActiveRecord: 1168.7ms)
+
+
+Started GET "/vendors/125/edit?step=finance_aspect" for ::1 at 2020-01-29 23:52:54 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"finance_aspect", "id"=>"125"}
+  [1m[36mMsVendor Load (2164.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (66.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1768.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (55.0ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (4030.5ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_finance_aspect.html.erb (8.0ms)
+  Rendered vendors/edit.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 8176ms (Views: 72.1ms | ActiveRecord: 8084.9ms)
+
+
+Started GET "/vendors/125/edit?step=password" for ::1 at 2020-01-29 23:53:10 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"password", "id"=>"125"}
+  [1m[36mMsVendor Load (140.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (29.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (17.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (19.4ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (19.4ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_password.html.erb (1.3ms)
+  Rendered vendors/edit.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 299ms (Views: 57.3ms | ActiveRecord: 226.2ms)
+
+
+Started DELETE "/sign_out" for ::1 at 2020-01-29 23:53:21 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wSfbx18lWdarqIH51zPUhSGoiTB3YCrySbyWHMU2R9hAfXiLfrvNN1Yv8oJ2UgeNQNCZGo2dFtjENwAy4BkQsg=="}
+  [1m[36mMsVendor Load (25.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (23.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[35mSQL (22.6ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35mSQL (17.6ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 134ms (ActiveRecord: 89.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 23:53:21 +0700
+Started GET "/login" for ::1 at 2020-01-29 23:53:21 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-29 23:53:28 +0700
+Started GET "/login" for ::1 at 2020-01-29 23:53:28 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2020-01-29 23:53:34 +0700
+Processing by MsVendors::RegistrationsController#new as HTML
+  [1m[36mMsVendorType Load (18.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_company_profile.html.erb (7.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 114ms (Views: 80.0ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/" for ::1 at 2020-01-29 23:54:22 +0700
+Processing by MsVendors::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FXaeFbPQnSCX14qRoaCwDPfDjcEXMRs9f4CrGhgX+QJCK1Vtq19YN/+0iHR/1tDpKBIQfGDbyNoUrUPh+VLCRw==", "ms_vendor"=>{"is_active"=>"true", "vendor_status"=>"1", "vendor"=>"1234567", "website"=>"12345678", "ms_vendor_type_id"=>"2", "fax"=>"+6288288282", "phone_1"=>"+628282882", "sales_tittle"=>"Mrs.", "sales_name"=>"etyuio", "sales_job"=>"wetyuio", "sales_phone"=>"+6288282882", "sales_email"=>"hiyah@gmail.com", "finance_tittle"=>"Mrs.", "finance_name"=>"Nameh", "finance_job"=>"Kpoaioa", "finance_phone"=>"+6282872729", "finance_email"=>"email@email.com"}, "commit"=>"Continue"}
+  [1m[36mMsVendorType Load (16.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[36mMsVendorType Load (22.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/ms_vendors/registrations_controller.rb:68
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_company_address.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 128ms (Views: 77.8ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 06:24:09 +0700
+  
+TinyTds::Error (Server name not found in configuration files):
+  
+tiny_tds (2.1.2) lib/tiny_tds/client.rb:60:in `connect'
+tiny_tds (2.1.2) lib/tiny_tds/client.rb:60:in `initialize'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/connection_adapters/sqlserver_adapter.rb:375:in `new'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/connection_adapters/sqlserver_adapter.rb:375:in `dblib_connect'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/connection_adapters/sqlserver_adapter.rb:361:in `connect'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/connection_adapters/sqlserver_adapter.rb:59:in `initialize'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/sqlserver_base.rb:13:in `new'
+activerecord-sqlserver-adapter (5.2.0) lib/active_record/sqlserver_base.rb:13:in `sqlserver_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-30 06:24:26 +0700
+  [1m[35mSQL (50.1ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/login" for ::1 at 2020-01-30 06:24:26 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 100ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2020-01-30 06:24:31 +0700
+Processing by MsVendors::RegistrationsController#new as HTML
+  [1m[36mMsVendorType Load (16.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_company_profile.html.erb (7.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 129ms (Views: 100.9ms | ActiveRecord: 16.8ms)
+
+
+Started POST "/" for ::1 at 2020-01-30 06:25:32 +0700
+Processing by MsVendors::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XsYrauWO0AcYWy1a7rNvsTw8dVnSTJK+/a9lKQXYr53SNLJmNMlq5xtyhoktUhXJhruQu03NVH7Jf6Ui4S9Kwg==", "ms_vendor"=>{"is_active"=>"true", "vendor_status"=>"1", "vendor"=>"Company Namee", "website"=>"www.yangakanada.com", "ms_vendor_type_id"=>"2", "fax"=>"+622185775", "phone_1"=>"+6285262728", "sales_tittle"=>"Mrs.", "sales_name"=>"Nameh", "sales_job"=>"Job Title", "sales_phone"=>"+62838393938", "sales_email"=>"takpernahadir@gmail.com", "finance_tittle"=>"Mrs.", "finance_name"=>"Nameh", "finance_job"=>"Job Title", "finance_phone"=>"+62856373838", "finance_email"=>"email@email.com"}, "commit"=>"Continue"}
+  [1m[36mMsVendorType Load (18.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[36mMsVendorType Load (23.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/ms_vendors/registrations_controller.rb:68
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_company_address.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 118ms (Views: 69.7ms | ActiveRecord: 42.1ms)
+
+
+Started POST "/" for ::1 at 2020-01-30 06:26:00 +0700
+Processing by MsVendors::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dr6AdxNImsSBCBjCGhDG4rqJ+eFDmAE5BsoXfjiSsIiT4ofoW0A+T0B4lc+nRjlwswxBVP3eKuUfM0ZK9c0LeQ==", "ms_vendor"=>{"is_active"=>"true", "vendor_status"=>"1", "ms_vendor_addresses_attributes"=>{"0"=>{"address_name"=>"Factory", "address"=>"Addresz", "city"=>"Cities", "province"=>"Provinces", "country"=>"Countries", "postal_code"=>"123456", "_destroy"=>"false"}}}, "commit"=>"Continue"}
+  [1m[36mMsVendorType Load (70.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[36mMsVendorType Load (17.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/ms_vendors/registrations_controller.rb:68
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_finance_aspect.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 218ms (Views: 117.2ms | ActiveRecord: 87.5ms)
+
+
+Started POST "/" for ::1 at 2020-01-30 06:26:35 +0700
+Processing by MsVendors::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0K8/bCncPHcpN8GpcU0kQLO0H7y9/uJb87p4DpQLkS818zjzYdSY/OhHTKTMG9vSujGnCQO4yYfqQyk6WVQq3g==", "ms_vendor"=>{"is_active"=>"true", "vendor_status"=>"1", "bank_name"=>"Kita semua gagal", "bank_city"=>"Cityyy", "bank_acc_type"=>"Goverment", "bank_acc_number"=>"123456", "bank_acc_name"=>"Nameee", "currency"=>"GBP", "bank_swift_code"=>"089"}, "currency_select"=>"GBP", "commit"=>"Continue"}
+  [1m[36mMsVendorType Load (19.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[36mMsVendorType Load (16.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/controllers/ms_vendors/registrations_controller.rb:68
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered vendors/_documents.html.erb (1.9ms)
+  Rendered devise/registrations/_legal_aspect.html.erb (8.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 137ms (Views: 89.1ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 06:41:15 +0700
+  [1m[35mSQL (18.9ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendor Load (32.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (16.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 200 OK in 184ms (Views: 153.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 13:45:40 +0700
+  [1m[35mSQL (2.9ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/login" for ::1 at 2020-01-30 13:45:41 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (227.3ms)
+Completed 200 OK in 1155ms (Views: 1015.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-30 13:45:55 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IgQ8N3chmgXV+6ubDz9i/nH9KW47f49LaESDvDw6q16DH9/V/7cNRjqeaCJcadkXKZtLo8ObOtzTbSbX1zMMlw==", "ms_vendor"=>{"username"=>"vendor", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mMsVendor Load (7.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[username] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'vendor', @1 = 1[0m  [["username", nil], ["LIMIT", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (3.7ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendor Update (5.8ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [current_sign_in_at] = @0, [last_sign_in_at] = @1, [sign_in_count] = @2, [updated_at] = @3 WHERE [ms_vendors].[id] = @4; SELECT @@ROWCOUNT AS AffectedRows', N'@0 datetime, @1 datetime, @2 int, @3 datetime, @4 bigint', @0 = '01-30-2020 06:45:55.316', @1 = '01-29-2020 15:09:59.456', @2 = 31, @3 = '01-30-2020 06:45:55.363', @4 = 125[0m  [["current_sign_in_at", nil], ["last_sign_in_at", nil], ["sign_in_count", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (8.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendorType Load (6.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 409ms (ActiveRecord: 116.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 13:45:55 +0700
+  [1m[36mMsVendor Load (9.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+Completed 200 OK in 113ms (Views: 102.5ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/sign_out" for ::1 at 2020-01-30 13:46:03 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P2gmatiFqUXyIg28KnaQKqQUxCvRBST23E9aTVEWgs6I3FuLw2PdXDhPjNwFwcVK577GQNMkRcNy3Gt1K7mQIg=="}
+  [1m[36mMsVendor Load (11.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (12.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[35mSQL (6.9ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35mSQL (4.2ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 34.9ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 13:46:03 +0700
+Started GET "/login" for ::1 at 2020-01-30 13:46:03 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 133ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-30 13:46:48 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6jg8s0CKoWXfJoUbG6ws66liU7nKBSmFLxrZ9/K3JUQKoPpP8d33eIKC37LypxnJwqnoVkysFQ1d/bIz+hMvzQ==", "ms_vendor"=>{"username"=>"admin.vms", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mMsVendor Load (8.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[username] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'admin.vms', @1 = 1[0m  [["username", nil], ["LIMIT", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (4.6ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendor Update (5.8ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [current_sign_in_at] = @0, [last_sign_in_at] = @1, [sign_in_count] = @2, [updated_at] = @3 WHERE [ms_vendors].[id] = @4; SELECT @@ROWCOUNT AS AffectedRows', N'@0 datetime, @1 datetime, @2 int, @3 datetime, @4 bigint', @0 = '01-30-2020 06:46:48.283', @1 = '01-29-2020 10:53:05.356', @2 = 21, @3 = '01-30-2020 06:46:48.29', @4 = 124[0m  [["current_sign_in_at", nil], ["last_sign_in_at", nil], ["sign_in_count", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (2.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendorType Load (6.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 4, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 13:46:48 +0700
+  [1m[36mMsVendor Load (4.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 124, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (6.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 4, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:4000/worklists
+Completed 302 Found in 9ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 19:46:55 +0700
+  [1m[35mSQL (2.7ms)[0m  [1m[35mUSE [portal_vendor_development][0m
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/login" for ::1 at 2020-01-30 19:46:56 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (212.7ms)
+Completed 200 OK in 2773ms (Views: 2689.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-30 19:47:15 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2h11xkDTssFNQJ2J/rAKp/sLcb9w+8etdw8pUGhn1EQxpUwir1ojXO2XU8IRmnpXmmU6ZfPK+Hi42AN/a+qj0g==", "ms_vendor"=>{"username"=>"vendor", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mMsVendor Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[username] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 nvarchar(4000), @1 int', @0 = N'vendor', @1 = 1[0m  [["username", nil], ["LIMIT", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (1.5ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendor Update (1.6ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [current_sign_in_at] = @0, [last_sign_in_at] = @1, [sign_in_count] = @2, [updated_at] = @3 WHERE [ms_vendors].[id] = @4; SELECT @@ROWCOUNT AS AffectedRows', N'@0 datetime, @1 datetime, @2 int, @3 datetime, @4 bigint', @0 = '01-30-2020 12:47:15.413', @1 = '01-30-2020 06:45:55.316', @2 = 32, @3 = '01-30-2020 12:47:15.426', @4 = 125[0m  [["current_sign_in_at", nil], ["last_sign_in_at", nil], ["sign_in_count", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[35mSQL (1.4ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mMsVendorType Load (2.2ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 236ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 19:47:15 +0700
+  [1m[36mMsVendor Load (2.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (1.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 408ms (Views: 400.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 19:51:42 +0700
+  [1m[36mMsVendor Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 105ms (Views: 97.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products_and_services" for ::1 at 2020-01-30 19:51:48 +0700
+Processing by ProductsAndServicesController#index as HTML
+  [1m[36mMsVendor Load (3.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.3ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering products_and_services/index.html.erb within layouts/application
+  Rendered products_and_services/index.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 140ms (Views: 124.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/inquiries" for ::1 at 2020-01-30 19:52:26 +0700
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendor Load (2.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.0ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 147ms (Views: 129.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/vendors/125/edit?step=finance_aspect" for ::1 at 2020-01-30 19:52:29 +0700
+Processing by VendorsController#edit as HTML
+  Parameters: {"step"=>"finance_aspect", "id"=>"125"}
+  [1m[36mMsVendor Load (2.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (2.1ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (1.8ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+  [1m[35mSQL (1.3ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  [1m[35mSQL (1.3ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:9
+  Rendering vendors/edit.html.erb within layouts/application
+  Rendered vendors/_finance_aspect.html.erb (23.3ms)
+  Rendered vendors/edit.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 176ms (Views: 129.6ms | ActiveRecord: 9.0ms)
+
+
+Started PUT "/vendors/125" for ::1 at 2020-01-30 19:52:39 +0700
+Processing by VendorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LAxejHUiPShk7bQH2MOCBc7M1iCAqhWmqJaTYkdGTwUKpFOekxL1XgX0gqQnQX2rBtX1aVk7AfiuwATtJmMqnA==", "ms_vendor"=>{"is_active"=>"true", "step"=>"finance_aspect", "bank_name"=>"Bank Name", "bank_city"=>"City/Regency", "bank_acc_type"=>"Company", "bank_acc_number"=>"021717189", "bank_acc_name"=>"Account Name", "currency"=>"IDR", "bank_swift_code"=>"", "account_document"=>#<ActionDispatch::Http::UploadedFile:0x00007fceb6843730 @tempfile=#<Tempfile:/var/folders/kw/tbsxp5_51g5dw2sh86qjyv940000gn/T/RackMultipart20200130-2083-1n31w2w.pdf>, @original_filename="003-Magang Binus Shagnaz Andika Qaulan.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"ms_vendor[account_document]\"; filename=\"003-Magang Binus Shagnaz Andika Qaulan.pdf\"\r\nContent-Type: application/pdf\r\n">}, "currency_select"=>"IDR", "commit"=>"Save", "id"=>"125"}
+  [1m[36mMsVendor Load (5.5ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mMsVendorType Load (1.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  [1m[36mMsVendorType Load (8.9ms)[0m  [1m[35mEXEC sp_executesql N'SELECT [ms_vendor_types].[type_name], [ms_vendor_types].[id] FROM [ms_vendor_types] WHERE [ms_vendor_types].[is_active] = @0', N'@0 bit', @0 = 1[0m  [["is_active", nil]]
+  ↳ app/models/ms_vendor_type.rb:5
+Unpermitted parameter: :step
+  [1m[35mSQL (1.2ms)[0m  [1m[36mBEGIN TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:23
+  [1m[36mMsVendor Update (3.3ms)[0m  [1m[35mEXEC sp_executesql N'UPDATE [ms_vendors] SET [account_document] = @0, [updated_at] = @1 WHERE [ms_vendors].[id] = @2; SELECT @@ROWCOUNT AS AffectedRows', N'@0 nvarchar(4000), @1 datetime, @2 bigint', @0 = N'003-Magang_Binus_Shagnaz_Andika_Qaulan.pdf', @1 = '01-30-2020 12:52:39.936', @2 = 125[0m  [["account_document", nil], ["updated_at", nil], ["id", nil]]
+  ↳ app/controllers/vendors_controller.rb:23
+  [1m[35mSQL (1.9ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/vendors_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 302 Found in 220ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 19:52:40 +0700
+  [1m[36mMsVendor Load (2.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (21.4ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (6.6ms)
+Completed 200 OK in 140ms (Views: 114.5ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/" for ::1 at 2020-01-30 19:52:42 +0700
+  [1m[36mMsVendor Load (2.7ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendors].* FROM [ms_vendors] WHERE [ms_vendors].[id] = @0  ORDER BY [ms_vendors].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 125, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ /Users/sekisah/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InquiriesController#index as HTML
+  [1m[36mMsVendorType Load (1.6ms)[0m  [1m[35mEXEC sp_executesql N'SELECT  [ms_vendor_types].* FROM [ms_vendor_types] WHERE [ms_vendor_types].[id] = @0  ORDER BY [ms_vendor_types].[id] ASC OFFSET 0 ROWS FETCH NEXT @1 ROWS ONLY', N'@0 bigint, @1 int', @0 = 2, @1 = 1[0m  [["id", nil], ["LIMIT", nil]]
+  ↳ app/models/ms_vendor.rb:70
+  Rendering inquiries/index.html.erb within layouts/application
+  Rendered inquiries/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 94ms (Views: 87.8ms | ActiveRecord: 1.6ms)
+
+

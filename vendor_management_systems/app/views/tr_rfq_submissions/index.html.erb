@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tr Rfq Submissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bidding types</th>
+      <th>Description</th>
+      <th>Need by date</th>
+      <th>Term of payment</th>
+      <th>No quotation</th>
+      <th>Incoterms</th>
+      <th>Note</th>
+      <th>Is active</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tr_rfq_submissions.each do |tr_rfq_submission| %>
+      <tr>
+        <td><%= tr_rfq_submission.bidding_types %></td>
+        <td><%= tr_rfq_submission.description %></td>
+        <td><%= tr_rfq_submission.need_by_date %></td>
+        <td><%= tr_rfq_submission.term_of_payment %></td>
+        <td><%= tr_rfq_submission.no_quotation %></td>
+        <td><%= tr_rfq_submission.incoterms %></td>
+        <td><%= tr_rfq_submission.note %></td>
+        <td><%= tr_rfq_submission.is_active %></td>
+        <td><%= tr_rfq_submission.created_by %></td>
+        <td><%= tr_rfq_submission.updated_by %></td>
+        <td><%= tr_rfq_submission.status %></td>
+        <td><%= link_to 'Show', tr_rfq_submission %></td>
+        <td><%= link_to 'Edit', edit_tr_rfq_submission_path(tr_rfq_submission) %></td>
+        <td><%= link_to 'Destroy', tr_rfq_submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tr Rfq Submission', new_tr_rfq_submission_path %>

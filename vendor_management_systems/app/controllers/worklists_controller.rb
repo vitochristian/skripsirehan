@@ -13,6 +13,7 @@ class WorklistsController < ApplicationController
     end
     @ms_vendor_types = MsVendorType.vendor_type_id
     @tr_rfqs = TrRfq.all
+    @tr_rfq_submissions = TrRfqSubmission.all
   end
 
   def show

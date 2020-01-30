@@ -1,0 +1,9 @@
+portal_vendors_1
+vendor_management_systems_1
+
+portal_vendors/public
+vendor_management_systems/public
+portal_vendors/tmp
+vendor_management_systems/tmp
+portal_vendors/log
+vendor_management_systems/log

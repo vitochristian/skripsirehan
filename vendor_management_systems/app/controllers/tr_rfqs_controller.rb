@@ -71,6 +71,6 @@ class TrRfqsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tr_rfq_params
-      params.require(:tr_rfq).permit(:ms_vendor_type_id, :item_name, :delivery_site, :note, :description, :need_by_date, :term_of_payment, :is_active, :created_by, :updated_by, :status)
+      params.require(:tr_rfq).permit(:no_rfq, :uom, :qty, :expiration_date, :ms_vendor_type_id, :item_name, :delivery_site, :note, :description, :need_by_date, :term_of_payment, :is_active, :created_by, :updated_by, :status)
     end
 end
