@@ -1,0 +1,106 @@
+<%= form_with(model: tr_rfq_submission, local: true) do |form| %>
+  <% if tr_rfq_submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tr_rfq_submission.errors.count, "error") %> prohibited this tr_rfq_submission from being saved:</h2>
+
+      <ul>
+      <% tr_rfq_submission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :bidding_types %>
+    </div>
+    <div class='col-sm-9'>
+      <%= form.select :bidding_types, ['As Requested', 'Not as Requested'], {include_blank:'-Select type-'}, class:'form-control' %>
+    </div>
+  </div>
+</div>
+  
+ <div class="row">
+   <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :description %>
+    </div>
+    <div class='col-sm-9'>
+      <%= form.text_area :description, class:'form-control' %>
+    </div>
+  </div>
+ </div>
+  
+
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :need_by_date %>
+    </div>
+    <div class='col-sm-9'>
+      <%= form.date_select :need_by_date, class:'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :term_of_payment %>
+    </div>
+    <div class='col-sm-9'>
+      <%= form.number_field :term_of_payment, class:'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :no_quotation %>
+    </div>
+    <div class='col-sm-9'>  
+      <%= form.text_field :no_quotation, class:'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :incoterms %>
+    </div>
+    <div class='col-sm-9'>    
+      <%= form.select :incoterms, ['CIP', 'DAT'], {include_blank:'-Select terms-'}, class:'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class='form-group'>
+    <div class='col-sm-3 control-label'>
+      <%= form.label :note %>
+    </div>
+    <div class='col-sm-9'>
+      <%= form.text_area :note, class:'form-control' %>
+    </div>
+  </div>
+</div>
+  <%= form.hidden_field :created_by, value: current_ms_vendor.id %>
+  <%= form.hidden_field :updated_by, value: current_ms_vendor.id %>
+<div class="row">
+  <div class="col-sm-10"></div>
+  <div class="col-sm-1">  
+    <div class="actions">
+      <%= form.submit 'Submit', class: 'btn btn-warning', data: { confirm: 'Are you sure?' }  %>
+    </div>
+  </div>
+  <div class="col-sm-1">
+    <%= link_to 'Cancel', tr_rfq_submissions_path, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }  %>
+  </div>  
+</div>
+
+
+<% end %>

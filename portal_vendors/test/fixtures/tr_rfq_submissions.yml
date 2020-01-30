@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bidding_types: MyString
+  description: MyText
+  need_by_date: 2020-01-29 20:29:59
+  term_of_payment: 1
+  no_quotation: MyString
+  incoterms: MyString
+  note: MyText
+  is_active: false
+  created_by: 
+  updated_by: 
+
+two:
+  bidding_types: MyString
+  description: MyText
+  need_by_date: 2020-01-29 20:29:59
+  term_of_payment: 1
+  no_quotation: MyString
+  incoterms: MyString
+  note: MyText
+  is_active: false
+  created_by: 
+  updated_by: 

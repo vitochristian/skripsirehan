@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_030355) do
+ActiveRecord::Schema.define(version: 2020_01_29_142238) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,11 +33,66 @@ ActiveRecord::Schema.define(version: 2019_09_30_030355) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "ms_items", force: :cascade do |t|
+    t.string "name"
+    t.string "moq"
+    t.string "uom"
+    t.string "leadtime"
+    t.string "classification"
+    t.string "country"
+    t.string "factory_number"
+    t.string "certification"
+    t.integer "tr_category_id"
+    t.string "sub_category"
+    t.boolean "is_active"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "brand"
+    t.string "principal"
+    t.integer "ms_vendor_id"
+  end
+
   create_table "ms_menus", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.boolean "is_active"
     t.integer "created_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "updated_by"
+  end
+
+  create_table "ms_role_menus", force: :cascade do |t|
+    t.integer "ms_role_id"
+    t.integer "ms_menu_id"
+    t.boolean "is_active"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ms_roles", force: :cascade do |t|
+    t.string "name"
+    t.boolean "is_active"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ms_users", force: :cascade do |t|
+    t.integer "authen_user_id"
+    t.string "login"
+    t.string "nik"
+    t.string "name"
+    t.string "email"
+    t.integer "ms_role_id"
+    t.boolean "is_active"
+    t.integer "created_by"
+    t.integer "updated_by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -155,6 +210,67 @@ ActiveRecord::Schema.define(version: 2019_09_30_030355) do
     t.index ["cas_ticket"], name: "index_sessions_on_cas_ticket"
     t.index ["session_id"], name: "index_sessions_on_session_id"
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
+  end
+
+  create_table "tr_categories", force: :cascade do |t|
+    t.string "category"
+    t.boolean "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tr_rfq_submission_dtls", force: :cascade do |t|
+    t.integer "offered_qty"
+    t.integer "price"
+    t.integer "tr_rfq_submission_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tr_rfq_submissions", force: :cascade do |t|
+    t.string "bidding_types"
+    t.text "description"
+    t.datetime "need_by_date"
+    t.integer "term_of_payment"
+    t.string "no_quotation"
+    t.string "incoterms"
+    t.text "note"
+    t.boolean "is_active"
+    t.bigint "created_by"
+    t.bigint "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status"
+    t.integer "tr_rfq_id"
+  end
+
+  create_table "tr_rfqs", force: :cascade do |t|
+    t.integer "ms_vendor_type_id"
+    t.text "item_name"
+    t.text "delivery_site"
+    t.text "note"
+    t.text "description"
+    t.date "need_by_date"
+    t.integer "term_of_payment"
+    t.boolean "is_active"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "expiration_date"
+    t.integer "qty"
+    t.string "uom"
+    t.string "no_rfq"
+  end
+
+  create_table "tr_vendor_categories", force: :cascade do |t|
+    t.integer "ms_vendor_id"
+    t.integer "tr_category_id"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

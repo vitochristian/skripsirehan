@@ -1,0 +1,2 @@
+class TrRfq < ApplicationRecord
+end
