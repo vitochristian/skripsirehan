@@ -2,19 +2,22 @@
   <div class='row'>
     <div class='form-group'>
       <div class='col-sm-12' style="text-align: center;">
-        <h4>
-          <p>There's no inquiry at the moment.</p>
-          <p>Thank you.</p>
-        </h4>
-        <!-- <p style="color: red;">Notes : halo!</p>
-        <table class="table table-hover table-striped myTable">
-          <thead>
-            <%#= render "table_head" %>
-          </thead>
-        <tbody>
-          <%#= render 'rfq_submissions', tr_pkp_item: @tr_pkp_items %>
-        </tbody>
-      </table> -->
+        <% if @tr_rfq.count < 1 %>
+          <h4>
+            <p>There's no inquiry at the moment.</p>
+            <p>Thank you.</p>
+          </h4>
+        <% else %>
+          <p style="color: red;">Notes : halo!</p>
+          <table class="table table-hover table-striped myTable">
+            <thead>
+              <%= render "table_head" %>
+            </thead>
+          <tbody>
+            <%= render 'rfq_submissions', tr_pkp_item: @tr_pkp_items %>
+          </tbody>
+        <% end %>
+      </table>
       </div>
     </div>
   </div>

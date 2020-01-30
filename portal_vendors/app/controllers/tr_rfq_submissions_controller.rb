@@ -5,7 +5,6 @@ class TrRfqSubmissionsController < ApplicationController
   # GET /tr_rfq_submissions.json
   def index
     @tr_rfq_submissions = TrRfqSubmission.all
-
   end
 
   # GET /tr_rfq_submissions/1
@@ -16,6 +15,7 @@ class TrRfqSubmissionsController < ApplicationController
   # GET /tr_rfq_submissions/new
   def new
     @tr_rfq_submission = TrRfqSubmission.new
+    @tr_rfq = TrRfq.find(params[:format])
   end
 
   # GET /tr_rfq_submissions/1/edit
