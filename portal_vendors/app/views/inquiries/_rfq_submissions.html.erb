@@ -7,6 +7,6 @@
 		<td><%= item.expiration_date %></td>
 		<td><%= item.need_by_date %></td>
 		<td><%= item.status %></td>
-		<td><%= link_to '+ Quotation', new_tr_rfq_submission_path(item.id), class: 'btn btn-warning' %></td>
+		<td><%= link_to '+ Quotation', new_tr_rfq_submission_path(item.id), class: ((item.status == 'Submitted')? 'btn btn-outline-secondary' : 'btn btn-warning'), disabled:((item.status == 'Submitted')? true : false) %></td>
 	</tr>
 <% end -%>

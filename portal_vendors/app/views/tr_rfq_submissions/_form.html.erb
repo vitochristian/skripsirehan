@@ -2,7 +2,6 @@
   <% if tr_rfq_submission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tr_rfq_submission.errors.count, "error") %> prohibited this tr_rfq_submission from being saved:</h2>
-
       <ul>
       <% tr_rfq_submission.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,97 +9,149 @@
       </ul>
     </div>
   <% end %>
- 
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :bidding_types %>
+<div class="form-panel-third">
+  <div class="form-horizontal">
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :item_name %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.text_field :item_name, value: @tr_rfq.item_name, class:'form-control', disabled:true %>
+        </div>
+      </div>
     </div>
-    <div class='col-sm-9'>
-      <%= form.select :bidding_types, ['As Requested', 'Not as Requested'], {include_blank:'-Select type-'}, class:'form-control' %>
-    </div>
-  </div>
-</div>
-  
- <div class="row">
-   <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :description %>
-    </div>
-    <div class='col-sm-9'>
-      <%= form.text_area :description, class:'form-control' %>
-    </div>
-  </div>
- </div>
-  
 
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :need_by_date %>
-    </div>
-    <div class='col-sm-9'>
-      <%= form.date_select :need_by_date, class:'form-control' %>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :term_of_payment %>
-    </div>
-    <div class='col-sm-9'>
-      <%= form.number_field :term_of_payment, class:'form-control' %>
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :delivery_site %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.text_field :delivery_site, value: @tr_rfq.delivery_site, class:'form-control', disabled:true %>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :note %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.text_field :note, value: @tr_rfq.note, class:'form-control', disabled:true %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :no_quotation %>
-    </div>
-    <div class='col-sm-9'>  
-      <%= form.text_field :no_quotation, class:'form-control' %>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :incoterms %>
+<div class="form-panel-third">
+  <div class="form-horizontal">
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :bidding_types %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.select :bidding_types, ['As Requested', 'Not as Requested'], {include_blank:'-Select type-'}, class:'form-control' %>
+        </div>
+      </div>
     </div>
-    <div class='col-sm-9'>    
-      <%= form.select :incoterms, ['CIP', 'DAT'], {include_blank:'-Select terms-'}, class:'form-control' %>
-    </div>
-  </div>
-</div>
+      
+     <div class="row">
+       <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :description %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.text_area :description, value: @tr_rfq.description, class:'form-control', disabled:true %>
+        </div>
+      </div>
+     </div>
+      
 
-<div class="row">
-  <div class='form-group'>
-    <div class='col-sm-3 control-label'>
-      <%= form.label :note %>
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :need_by_date %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.date_select :need_by_date, value: @tr_rfq.need_by_date, class:'form-control', disabled:true %>
+        </div>
+      </div>
     </div>
-    <div class='col-sm-9'>
-      <%= form.text_area :note, class:'form-control' %>
-    </div>
-  </div>
-</div>
-  <%= form.hidden_field :created_by, value: current_ms_vendor.id %>
-  <%= form.hidden_field :updated_by, value: current_ms_vendor.id %>
-<div class="row">
-  <div class="col-sm-10"></div>
-  <div class="col-sm-1">  
-    <div class="actions">
-      <%= form.submit 'Submit', class: 'btn btn-warning', data: { confirm: 'Are you sure?' }  %>
-    </div>
-  </div>
-  <div class="col-sm-1">
-    <%= link_to 'Cancel', tr_rfq_submissions_path, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }  %>
-  </div>  
-</div>
 
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :term_of_payment %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.number_field :term_of_payment, value: @tr_rfq.term_of_payment, class:'form-control', disabled:true %>
+        </div>
+      </div>
+    </div>
+
+    <%= form.fields_for :tr_rfq_submission_dtls do |dtl| %>
+       <%= render 'tr_rfq_submission_dtls', f: dtl %>
+    <% end -%>
+    <br><br>
+    <div class="col-sm-12">
+      <%= link_to_add_association 'Add Proposition', form, :tr_rfq_submission_dtls, partial: 'tr_rfq_submission_dtls' %>
+    </div>
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :incoterms %>
+        </div>
+        <div class='col-sm-9'>    
+          <%= form.select :incoterms, ['CIP', 'DAT'], {include_blank:'-Select terms-'}, class:'form-control' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='form-group'>
+        <div class='col-sm-3 control-label'>
+          <%= form.label :note %>
+        </div>
+        <div class='col-sm-9'>
+          <%= form.text_area :note, class:'form-control' %>
+        </div>
+      </div>
+    </div>
+      <%= form.hidden_field :created_by, value: current_ms_vendor.id %>
+      <%= form.hidden_field :updated_by, value: current_ms_vendor.id %>
+      <%= form.hidden_field :tr_rfq_id, value: @tr_rfq.id  %>
+
+    <div class="row">
+      <div class="col-sm-10"></div>
+      <div class="col-sm-1">  
+        <div class="actions">
+          <%= form.submit 'Submit', class: 'btn btn-warning', data: { confirm: 'Are you sure?' }  %>
+        </div>
+      </div>
+      <div class="col-sm-1">
+        <%= link_to 'Cancel', tr_rfq_submissions_path, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }  %>
+      </div>  
+    </div>
+  </div>
+</div>
 
 <% end %>
+
+<script type="text/javascript">
+  $('#tr_rfq_submission_bidding_types').on('change', function(){
+    if($('#tr_rfq_submission_bidding_types').val() == 'Not as Requested')
+    {
+      $('#tr_rfq_submission_description').attr('disabled', false);
+      $('#tr_rfq_submission_need_by_date_1i').attr('disabled', false);
+      $('#tr_rfq_submission_need_by_date_2i').attr('disabled', false);
+      $('#tr_rfq_submission_need_by_date_3i').attr('disabled', false);
+      $('#tr_rfq_submission_term_of_payment').attr('disabled', false);
+    }
+  })
+
+
+</script>

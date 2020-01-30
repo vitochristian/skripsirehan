@@ -15,6 +15,7 @@ class TrRfqSubmissionsController < ApplicationController
   # GET /tr_rfq_submissions/new
   def new
     @tr_rfq_submission = TrRfqSubmission.new
+    @tr_rfq_submission.tr_rfq_submission_dtls.build
     @tr_rfq = TrRfq.find(params[:format])
   end
 
@@ -26,12 +27,12 @@ class TrRfqSubmissionsController < ApplicationController
   # POST /tr_rfq_submissions.json
   def create
     @tr_rfq_submission = TrRfqSubmission.new(tr_rfq_submission_params)
-
     respond_to do |format|
       if @tr_rfq_submission.save
+
         format.html { redirect_to inquiries_path, notice: 'Quotation was successfully created.' }
         format.json { render :show, status: :created, location:inquiries_path }
-
+        TrRfq.find(@tr_rfq_submission.tr_rfq_id).update(status: 'Submitted');
       else
         format.html { render :new }
         format.json { render json: @tr_rfq_submission.errors, status: :unprocessable_entity }
@@ -72,6 +73,7 @@ class TrRfqSubmissionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def tr_rfq_submission_params
       # params.require(:tr_rfq_submission).permit(:bidding_types, :description, :need_by_date, :term_of_payment, :no_quotation, :incoterms, :note, :is_active, :created_by, :updated_by)
-      params.require(:tr_rfq_submission).permit! #(:bidding_types, :description, :need_by_date, :term_of_payment, :no_quotation, :incoterms, :note, :is_active, :created_by, :updated_by)
+      params.require(:tr_rfq_submission).permit(:bidding_types, :description, :need_by_date, :term_of_payment, :no_quotation, :incoterms, :note, :is_active, :created_by, :updated_by,
+                                                :tr_rfq_id, tr_rfq_submission_attributes: [:id, :price, :offered_qty, :_destroy])
     end
 end
